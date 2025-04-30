@@ -1,0 +1,252 @@
+[10-Jan-2021 08:46:03 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 44
+[10-Jan-2021 08:52:09 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 44
+[10-Jan-2021 08:52:37 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:09:13 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function getsize() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:45
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:09:30 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function getsize() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:45
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:09:31 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function getsize() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:45
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:10:39 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function getsize() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:45
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:10:43 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function getsize() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:45
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:10:53 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function getsize() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:45
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:11:26 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function getsize() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:45
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:11:33 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function getsize() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:45
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:11:55 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:11:59 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:12:17 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:12:18 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:12:32 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:12:44 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:13:09 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:13:55 America/Boise] PHP Warning:  getimagesize(): Filename cannot be empty in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:17:14 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function getfilesize() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:45
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 45
+[10-Jan-2021 09:19:31 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:19:31 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php27ThEU' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:19:50 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:19:50 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpebzv4B' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:19:50 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:19:50 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpmvpizU' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:21:06 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:21:06 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpBHGrud' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:21:12 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:21:12 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpIisbEN' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:21:27 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:21:27 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpApqw9m' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:21:43 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:21:43 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpWyqlsv' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:03 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:03 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpU4l2Jt' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:37 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:37 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpGdG8rN' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:39 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:39 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpYR8YE3' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:57 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:57 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpOPUG96' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:58 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:22:58 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpzMRiI1' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:23:09 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:23:09 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpnnLHmA' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:23:18 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:23:18 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpm2tZbP' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:23:24 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:23:24 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpCL2FyZ' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:23:44 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:23:44 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpy1PMbG' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:12 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:12 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpTc10tH' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:31 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:31 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php3tY3Yz' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:45 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:45 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php2XtJBc' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:49 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:49 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpfDbiQX' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:51 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:51 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpShznOO' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:52 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:52 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpBC5TPr' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:52 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:52 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpRwwAod' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:58 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:24:58 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpV0Phv1' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:25:17 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:25:17 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpL57Wa0' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:25:42 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:25:42 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpbaHDRb' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:27:21 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:27:21 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php8FwTeG' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 77
+[10-Jan-2021 09:32:09 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:32:09 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpRmglw1' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:32:25 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:32:25 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpFEies3' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:33:37 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:33:37 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php4aNwVa' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:35:36 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:35:36 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php8BBMbm' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:35:37 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:35:37 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpHpKZ0W' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:36:15 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:36:15 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php50Chfx' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:36:15 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:36:15 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpTeMErZ' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:37:54 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:37:54 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpbCvSQy' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:39:19 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:39:19 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpfeshav' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:39:20 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:39:20 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpPBXcdX' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:39:20 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:39:20 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpIrggG4' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:39:21 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:39:21 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpmDjMY7' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:41:31 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:41:31 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phperOuSG' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:42:06 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:42:06 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php2rCl7R' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:42:11 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:42:11 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpYTXhvi' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 09:46:30 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:46:30 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpr8bR4b' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:48:01 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:48:01 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php50Nzk2' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:48:43 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:48:43 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpuUde8x' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:51:10 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:51:10 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phppepARb' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:51:42 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:51:42 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsXjvrO' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:51:57 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:51:57 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php2FfYUj' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:53:25 America/Boise] PHP Warning:  A non-numeric value encountered in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 48
+[10-Jan-2021 09:53:25 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:53:25 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpIHvxWG' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:53:30 America/Boise] PHP Warning:  A non-numeric value encountered in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 48
+[10-Jan-2021 09:53:30 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:53:30 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpZT7Ep2' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:53:46 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:53:46 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwwhgc5' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:54:48 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:54:48 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpihVs81' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:54:50 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:54:50 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php3eqpQK' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:55:14 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Open.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 09:55:14 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpi0BEzy' to 'uploads/Guide_Open.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:04:26 America/Boise] PHP Parse error:  syntax error, unexpected '"."' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 48
+[10-Jan-2021 10:04:28 America/Boise] PHP Parse error:  syntax error, unexpected '"."' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 48
+[10-Jan-2021 10:09:02 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:09:02 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpVkqoLO' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:09:08 America/Boise] PHP Warning:  move_uploaded_file(uploads/End_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:09:08 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php6qFdIU' to 'uploads/End_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:09:28 America/Boise] PHP Warning:  move_uploaded_file(uploads/Guide_Flat_V2.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:09:28 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpD6GGaR' to 'uploads/Guide_Flat_V2.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:24:48 America/Boise] PHP Warning:  move_uploaded_file(http://johnathanuptegraph.com/Uploads/Ender_3_PRO_LCD_and_Raspberry_Pi_Enclosure_Case_w_Fan_V2.stl): failed to open stream: HTTP wrapper does not support writeable connections in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:24:48 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php8lillr' to 'http://johnathanuptegraph.com/Uploads/Ender_3_PRO_LCD_and_Raspberry_Pi_Enclosure_Case_w_Fan_V2.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:24:48 America/Boise] PHP Warning:  move_uploaded_file(http://johnathanuptegraph.com/Uploads/Ender_3_PRO_LCD_and_Raspberry_Pi_Enclosure_Case_w_Fan_V2.stl): failed to open stream: HTTP wrapper does not support writeable connections in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:24:48 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpyVzbUK' to 'http://johnathanuptegraph.com/Uploads/Ender_3_PRO_LCD_and_Raspberry_Pi_Enclosure_Case_w_Fan_V2.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 78
+[10-Jan-2021 10:40:56 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function Moved() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:82
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 82
+[10-Jan-2021 10:41:50 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function Moved() in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php:82
+Stack trace:
+#0 {main}
+  thrown in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 82
+[10-Jan-2021 10:45:58 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender_3_Extruder_Knob1.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:45:58 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpyPKyPT' to 'Uploads/Ender_3_Extruder_Knob1.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:46:21 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:46:21 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpdNrthO' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:46:38 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:46:38 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpb2TMRA' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:46:55 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:46:55 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpiiFYHe' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:02 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:02 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php7SfS6y' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:08 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:08 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phplKiRjZ' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:09 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:09 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php9ZWusM' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:09 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:09 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpWfDTI5' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:12 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:12 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phply6UwI' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:19 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:47:19 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpRUfNtk' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:51:14 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_without_bell_closed.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:51:14 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpjEevfO' to 'Uploads/Ender-3_Display_Cover_without_bell_closed.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:52:24 America/Boise] PHP Warning:  move_uploaded_file(Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 10:52:24 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php2Uw4pT' to 'Uploads/Ender-3_Display_Cover_factory_srews_with_bell_closed_3connectors.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 11:00:53 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 105
+[10-Jan-2021 11:00:57 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 105
+[10-Jan-2021 11:01:09 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 105
+[10-Jan-2021 11:01:15 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 105
+[10-Jan-2021 11:01:47 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 11:01:58 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 11:02:14 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 11:02:22 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 11:04:12 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 11:19:38 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 11:19:38 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 11:19:41 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 12:03:01 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 12:03:03 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 12:03:05 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 12:03:06 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 12:03:08 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 12:03:14 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 12:03:38 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 104
+[10-Jan-2021 12:06:29 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsEnder-3_Display_Cover_without_bell.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 12:06:29 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpcqSdUK' to 'MyInterest/UploadsEnder-3_Display_Cover_without_bell.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 12:06:36 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsEnder-3_Display_Cover_with_bell_closed.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[10-Jan-2021 12:06:36 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpd9KzbH' to 'MyInterest/UploadsEnder-3_Display_Cover_with_bell_closed.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 79
+[11-Jan-2021 15:43:59 America/Boise] PHP Parse error:  syntax error, unexpected '}' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 85
+[11-Jan-2021 15:44:02 America/Boise] PHP Parse error:  syntax error, unexpected '}' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 85
+[11-Jan-2021 15:48:17 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsCable_Chain_Remix (1).stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 81
+[11-Jan-2021 15:48:17 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpa3Uc2l' to 'MyInterest/UploadsCable_Chain_Remix (1).stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 81
+[11-Jan-2021 15:49:38 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsCable_Chain_Remix (1).stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 81
+[11-Jan-2021 15:49:38 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpnX2NYF' to 'MyInterest/UploadsCable_Chain_Remix (1).stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 81
+[13-Jan-2021 10:13:59 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/Uploadsnut_1.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[13-Jan-2021 10:13:59 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpbAVfFA' to 'MyInterest/Uploadsnut_1.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[13-Jan-2021 10:14:45 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsBattery_Holder_v2.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[13-Jan-2021 10:14:45 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpSi4iBt' to 'MyInterest/UploadsBattery_Holder_v2.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[13-Jan-2021 10:14:54 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsBattery_Holder_v2.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[13-Jan-2021 10:14:54 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpgrLD9O' to 'MyInterest/UploadsBattery_Holder_v2.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[13-Jan-2021 10:23:32 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsBattery_Holder_v2.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[13-Jan-2021 10:23:32 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpGaTEcF' to 'MyInterest/UploadsBattery_Holder_v2.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[23-Jan-2021 17:38:31 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/Uploadsfilament-guide.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[23-Jan-2021 17:38:31 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpiupdS6' to 'MyInterest/Uploadsfilament-guide.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[23-Jan-2021 17:39:00 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsLCD_Cover_Pro_with_Vents.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[23-Jan-2021 17:39:00 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpUguWmS' to 'MyInterest/UploadsLCD_Cover_Pro_with_Vents.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[23-Jan-2021 17:39:21 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsEnder_3_PRO_LCD_and_Raspberry_Pi_Enclosure_Case_w_Fan_w_ResetV2_1.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[23-Jan-2021 17:39:21 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpyUzNxj' to 'MyInterest/UploadsEnder_3_PRO_LCD_and_Raspberry_Pi_Enclosure_Case_w_Fan_w_ResetV2_1.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[24-Jan-2021 12:57:28 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsEnd_Clip.STL): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[24-Jan-2021 12:57:28 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpBU9NWl' to 'MyInterest/UploadsEnd_Clip.STL' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[26-Jan-2021 18:35:58 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsLM2596_Gadget_addict.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[26-Jan-2021 18:35:58 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phprqht9V' to 'MyInterest/UploadsLM2596_Gadget_addict.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[07-Mar-2021 14:37:12 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsPS4_Magnetic_Webshooter_Remix.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[07-Mar-2021 14:37:12 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpSq2N38' to 'MyInterest/UploadsPS4_Magnetic_Webshooter_Remix.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[07-Mar-2021 14:37:25 America/Boise] PHP Warning:  move_uploaded_file(MyInterest/UploadsMounting_parts.stl): failed to open stream: No such file or directory in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80
+[07-Mar-2021 14:37:25 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php9bdACO' to 'MyInterest/UploadsMounting_parts.stl' in /home2/johnatm2/public_html/IMS222/MyInterest/RequestPrint.php on line 80

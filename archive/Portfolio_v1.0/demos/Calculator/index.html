@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>My Calculator</h2>
+
+  <main class="blog">
+    <div class="divvy" id="screen">0</div>
+
+    <div class="row">
+      <button class="value">7</button>
+      <button class="value">8</button>
+      <button class="value">9</button>
+      <button class="operator">+</button>
+    </div>
+    <div class="row">
+      <button class="value">4</button>
+      <button class="value">5</button>
+      <button class="value">6</button>
+      <button class="operator">-</button>
+    </div>
+    <div class="row">
+      <button class="value">1</button>
+      <button class="value">2</button>
+      <button class="value">3</button>
+      <button class="operator">*</button>
+    </div>
+    <div class="row">
+      <button class="value">0</button>
+      <button class="value">.</button>
+      <button id="back">←</button>
+      <button class="operator">/</button>
+    </div>
+    <div class="row">
+      <button id="clear">C</button>
+      <button id="equals">=</button>
+    </div>
+  </main>
+
+  <div class="dark-mode-toggle-container">
+    <label class="dark-mode-label" for="toggleTheme">Light Mode</label>
+    <label class="switch">
+      <input type="checkbox" id="toggleTheme">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <audio id="clickSound" src="https://www.soundjay.com/button/button-16.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
