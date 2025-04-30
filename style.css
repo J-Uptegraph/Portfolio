@@ -23,7 +23,7 @@ html { scroll-padding-top: 80px; }
 .theme-label {
   font-size: 0.85rem;
   color: #ddd;
-  transition: color 0__', 1.5rem;
+  transition: color 0.3s ease;
 }
 .light-label { margin-right: 5px; }
 .dark-label { margin-left: 5px; }
@@ -71,39 +71,71 @@ html { scroll-padding-top: 80px; }
 .about-container { 
   margin-top: 6rem; 
   margin-bottom: 8rem; 
-  padding: 4rem 2rem; /* Increased padding for better spacing */
-  background: linear-gradient(135deg, #f8f8f8 0%, #e8f0e8 100%); /* Subtle gradient background */
+  padding: 0; /* Remove padding to allow full-width */
+  background: #fff; /* Clean white background */
   position: relative;
   overflow: hidden;
 }
 .about-content {
+  position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  min-height: 600px; /* Ensure enough height for the background image */
+  max-width: 1400px;
   margin: 0 auto;
 }
+.about-image { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.about-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 100%); /* Gradient overlay */
+  z-index: 2;
+}
+.about-image img {
+  display: none; /* Hide the img tag since we're using background-image */
+}
 .about-text { 
-  flex: 1 1 500px; 
-  max-width: 600px; 
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+  margin-left: auto; /* Push text to the right */
+  padding: 4rem 2rem;
+  z-index: 3;
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out forwards; /* Fade-in animation */
+  animation: fadeInText 1s ease-out forwards 0.3s; /* Fade-in animation */
 }
 .about-text h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: #333;
-  margin-bottom: 1.5rem;
+  color: #1f1e20;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
 }
+.about-text h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #73aa2d;
+  margin-bottom: 2rem;
+}
 .about-text p {
-  font-size: 1.2rem;
-  line-height: 1.9;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
   color: #555;
+  margin-bottom: 1.5rem;
 }
 .about-text a {
   color: #73aa2d;
@@ -114,82 +146,48 @@ html { scroll-padding-top: 80px; }
 .about-text a:hover {
   color: #5a8b24;
 }
-.about-image { 
-  flex: 0 0 350px; 
-  text-align: center; 
-}
-.about-image img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 50%; /* Circular image */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: scale(0.9);
-  animation: zoomIn 0.8s ease-out forwards 0.3s; /* Zoom-in animation with delay */
-}
-.about-image img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
 
 /* Animations */
-@keyframes fadeInUp {
+@keyframes fadeInText {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes zoomIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+    transform: translateX(0);
   }
 }
 
 /* Media Queries for Responsiveness */
-@media (min-width: 992px) {
-  .about-content {
-    align-items: center; /* Align items in the center for desktop */
-  }
-  .about-image img {
-    width: 400px; /* Slightly larger image on desktop */
-    height: 400px;
-  }
-}
 @media (max-width: 991px) {
   .about-content { 
     flex-direction: column; 
-    text-align: center; 
-    gap: 2.5rem; /* Reduced gap for mobile */
-  }
-  .about-text { 
-    order: 1; 
-    max-width: 100%;
-    padding: 0 1rem; /* Add padding for better mobile spacing */
-  }
-  .about-text h2 {
-    font-size: 2rem; /* Smaller heading on mobile */
-  }
-  .about-text p {
-    font-size: 1.1rem; /* Slightly smaller paragraph text */
+    min-height: auto;
   }
   .about-image { 
-    order: 2; 
-    margin-top: 0; 
+    position: relative;
+    width: 100%;
+    height: 300px; /* Fixed height for mobile */
+    background-position: center top;
   }
-  .about-image img {
-    width: 280px; /* Smaller image on mobile */
-    height: 280px;
+  .about-image::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 100%); /* Vertical gradient for mobile */
+  }
+  .about-text { 
+    margin-left: 0;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .about-text h2 {
+    font-size: 2.2rem;
+  }
+  .about-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .about-text p {
+    font-size: 1rem;
   }
 }
 
@@ -1057,10 +1055,16 @@ body:not(.dark-mode) .footer-btn:hover i {
   background: #333;
 }
 .dark-mode .about-container {
-  background: linear-gradient(135deg, #1f1e20 0%, #2a2a2a 100%); /* Dark gradient for dark mode */
+  background: #121212; /* Dark background */
+}
+.dark-mode .about-image::after {
+  background: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.9) 100%); /* Dark gradient in dark mode */
 }
 .dark-mode .about-text h2 {
   color: #e0e0e0; /* Light text in dark mode */
+}
+.dark-mode .about-text h3 {
+  color: #73aa2d; /* Green subheading */
 }
 .dark-mode .about-text p {
   color: #bbb; /* Medium grey text in dark mode */
@@ -1070,12 +1074,6 @@ body:not(.dark-mode) .footer-btn:hover i {
 }
 .dark-mode .about-text a:hover {
   color: #5a8b24;
-}
-.dark-mode .about-image img {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Darker shadow in dark mode */
-}
-.dark-mode .about-image img:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
 }
 .dark-mode .info-item h4 {
   border-bottom-color: #73aa2d;
@@ -1108,6 +1106,9 @@ body:not(.dark-mode) .footer-btn:hover i {
   }
   .dark-mode .info-panel {
     border-top: none; /* Remove green border */
+  }
+  .dark-mode .about-image::after {
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.9) 100%); /* Vertical gradient for mobile */
   }
 }
 @media (max-width: 767px) and (orientation: landscape) {
