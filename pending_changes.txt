@@ -1,0 +1,14 @@
+
+- Figure out how we don't make this look like shit on mobile or when it's rotated side-ways on a iphone
+- Make the View Resume and View Site Code Buttons Green on hover... and bump up the size of the linkedin and github icons...
+- Clean up the overhang from the contact section thats bleeding into the bottom of the about section... make that picture look better too...
+- Make the hover timing for the Featured section just a smidge longer so that it doesnt drift all over the place...
+- Make the arrow button white with a green inner arrow on hover
+- Develop a cleaner structure for the text inside the Details section of the Featured section
+- Improve Footer
+- Improve Content
+
+
+Add/Purge material for portfolio projects... add 2 AND remove 2... 
+  > Encorperate "Publication"
+  > ESP32 Garage Door Project + Repo

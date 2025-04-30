@@ -1,0 +1,624 @@
+/* Johnathan Uptegraph - 10/22/2020*/
+ body {
+     margin: 0 auto 0 auto;
+     width: 100%;
+     background: transparent url(../PrintManager/Images/bg.png) repeat;
+     font-family: 'Orienta', sans-serif;
+}
+ .content {
+     margin: 0 auto;
+     width: 960px;
+}
+ .clearfix:after {
+     content: "";
+     display: table;
+     clear: both;
+}
+/* Header Style */
+ .top {
+     font-family: Cambria, Georgia, serif;
+     line-height: 24px;
+     font-size: 11px;
+     background: #fff;
+     background: rgba(255, 255, 255, 0.8);
+     text-transform: uppercase;
+     z-index: 9999;
+     position: relative;
+     margin-top: 0px;
+     box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+     margin-bottom: 40px;
+}
+ .top a {
+     font-size: 11px;
+     font-family: Cambria, Georgia, serif;
+     padding: 0px 10px;
+     letter-spacing: 1px;
+     display: inline-block;
+     text-decoration: none;
+     color:#444444;
+}
+ .top a:hover {
+     background: #f2f2f2;
+}
+ .top span.right {
+     float: right;
+}
+ #menu {
+     float: center;
+     width: 100%;
+     height: 200px;
+     font-family: 'Average Sans', sans-serif;
+}
+ #menu ul {
+     width: 100%;
+     float: center;
+     margin-top: 20px;
+     height: 200px;
+}
+ #menu ul.home-menu {
+     margin-bottom: 0;
+     float: center;
+     height: 200px;
+}
+ #menu li {
+     float: left;
+     list-style: none;
+     width: 150px;
+     height: 200px;
+}
+ #menu li a {
+     width: 100px;
+     height: 106px;
+     font-size: 16px;
+     line-height: 46px;
+     text-transform: uppercase;
+     color: #444444;
+     text-align: center;
+     float: left;
+     text-decoration: none;
+     margin-right: 5px;
+     padding: 30px 30px 6px;
+     -moz-transition-duration: .3s;
+     -webkit-transition-duration: .3s;
+     opacity: 0.8;
+}
+ a.current-page {
+     margin-left: -1px;
+}
+ #menu li a:hover {
+     padding-top: 22px;
+     padding-bottom: 22px;
+     border-radius: 500px;
+     -moz-border-radius: 500px;
+     -webkit-border-radius: 500px;
+     margin-top: -20px;
+     color:#f9f9f9;
+     font-size: 16px;
+     opacity: 1.0;
+}
+/* CHARCOAL */
+ li.charcoal a {
+     font-family: 'Orienta', sans-serif;
+     width: 100px;
+     height: 106px;
+     background: transparent url(../PrintManager/Images/bubble-charcoal.png) top center no-repeat;
+     font-size: 16px;
+     line-height: 30px;
+     text-transform: uppercase;
+     text-align: center;
+     float: left;
+     text-decoration: none;
+     margin-right: 5px;
+     padding: 30px 30px 6px;
+     -moz-transition-duration: .3s;
+     -webkit-transition-duration: .3s;
+     opacity: 0.8;
+}
+ li.charcoal a:hover {
+     padding-top: 22px;
+     padding-bottom: 22px;
+     border-radius: 500px;
+     -moz-border-radius: 500px;
+     -webkit-border-radius: 500px;
+     margin-top: -20px;
+     font-size: 16px;
+     opacity: 1.0;
+     background: transparent url(../PrintManager/Images/bubble-charcoal.png) top center no-repeat;
+}
+/* PAGE */
+ .divide {
+     font-family: 'Orienta', sans-serif;
+     width: 100%;
+     /*! border-top: 8px #b72632 solid; */
+     background: transparent url(../PrintManager/Images/bg.png) repeat;
+     border-radius: 1000px;
+     position: relative;
+     padding: 50px 0;
+     text-align: center;
+}
+ .divide a {
+     text-decoration: none;
+     font-weight: bold;
+     text-transform: uppercase;
+     color: #444444;
+}
+/* FOOTER */
+ .footer {
+     position: relative;
+     width: 100%;
+     padding: 50px 0;
+     border-top: 1px #b72632 solid;
+     font-size: 14px;
+}
+ .footer-left {
+     width: 50%;
+     float: left;
+}
+ .footer-left a {
+     text-decoration: none;
+     font-weight: bold;
+     text-transform: uppercase;
+     color: #444444;
+}
+ .footer-right {
+     text-align: right;
+}
+/* Smaller than standard 960 (devices and browsers) */
+ @media only screen and (max-width: 959px) {
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+ @media only screen and (min-width: 768px) and (max-width: 959px) {
+     .content {
+         width:768px;
+         margin: 0 auto;
+         position:relative;
+         display:block;
+    }
+     .divide {
+         width:100%;
+         top:10px;
+         clear:both;
+    }
+     #menu {
+         width: 86%;
+         height: auto;
+         font-family: 'Average Sans', sans-serif;
+    }
+     #menu ul {
+         width: 100%;
+         float: center;
+         margin-top: 20px;
+         height: 100px;
+    }
+     #menu ul.home-menu {
+         margin-bottom: 0;
+         float: center;
+         height: 100px;
+    }
+     #menu li {
+         float: left;
+         list-style: none;
+         width: 16%;
+         height: 100px;
+    }
+     #menu li a {
+         width: 100%;
+         height: 106px;
+         font-size: 16px;
+         line-height: 46px;
+         text-transform: uppercase;
+         color: #444444;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 30px 30px 6px;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     .footer {
+         width:100%;
+         top:40px;
+         clear:both;
+    }
+}
+/* All Mobile Sizes (devices and browser) */
+ @media only screen and (max-width: 767px) {
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+     .content {
+         width:460px;
+         margin: 0 auto;
+         position:relative;
+         display:block;
+    }
+     .divide {
+         width:100%;
+         clear:both;
+    }
+     #menu {
+         width: 86%;
+         height: auto;
+         font-family: 'Average Sans', sans-serif;
+    }
+     #menu ul {
+         width: 100%;
+         margin: 0px auto;
+         height: auto;
+    }
+     #menu ul.home-menu {
+         margin-bottom: 0;
+         float: left;
+         height: auto;
+    }
+     #menu li {
+         float: left;
+         list-style: none;
+         width: 33%;
+         height: 80px;
+    }
+     #menu li a {
+         width: 50%;
+         height: 10px;
+         font-size: 16px;
+         line-height: 46px;
+         text-transform: uppercase;
+         color: #444444;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         margin-bottom:40px;
+         padding: 10px 30px 6px;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+    /* CHARCOAL */
+     li.charcoal a {
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/bubble-charcoal.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.charcoal a:hover {
+         padding-top: 22px;
+         padding-bottom: 22px;
+         border-radius: 500px;
+         -moz-border-radius: 500px;
+         -webkit-border-radius: 500px;
+         margin-top: -20px;
+         font-size: 16px;
+         opacity: 1.0;
+         background: transparent url(../PrintManager/Images/bubble-charcoal.png) top center no-repeat;
+    }
+     li.SpoolA a {
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlackSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolA a:hover{
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlackSpool.png) center center no-repeat;
+         line-height: 1;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolB a {
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlueSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolB a:hover{
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlueSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolB a {
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlueSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolA a:hover{
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlackSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.charcoal a:hover {
+         padding-top: 22px;
+         padding-bottom: 22px;
+         border-radius: 500px;
+         -moz-border-radius: 500px;
+         -webkit-border-radius: 500px;
+         margin-top: -20px;
+         font-size: 16px;
+         opacity: 1.0;
+         background: transparent url(../PrintManager/Images/bubble-charcoal.png) top center no-repeat;
+    }
+     .footer {
+         width:100%;
+         top:40px;
+         clear:both;
+    }
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+ @media only screen and (max-width: 479px) {
+     .content {
+         width:280px;
+         margin: 0 auto;
+         position:relative;
+         display :block;
+    }
+     .divide {
+         width:100%;
+         clear:both;
+    }
+     #menu {
+         width: 86%;
+         height: auto;
+         font-family: 'Average Sans', sans-serif;
+    }
+     #menu ul {
+         width: 100%;
+         margin: 0px auto;
+         height: auto;
+    }
+     #menu ul.home-menu {
+         margin-bottom: 0;
+         float: left;
+         height: auto;
+    }
+     #menu li {
+         float: left;
+         list-style: none;
+         width: 40%;
+         height: 80px;
+    }
+     #menu li a {
+         width: 50%;
+         height: 10px;
+         font-size: 16px;
+         line-height: 46px;
+         text-transform: uppercase;
+         color: #444444;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         margin-bottom:40px;
+         padding: 10px 30px 6px;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+    /* CHARCOAL */
+     li.charcoal a {
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/bubble-charcoal.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.charcoal a:hover {
+         padding-top: 22px;
+         padding-bottom: 22px;
+         border-radius: 500px;
+         -moz-border-radius: 500px;
+         -webkit-border-radius: 500px;
+         margin-top: -20px;
+         font-size: 16px;
+         opacity: 1.0;
+         color: #282828 !important;
+         background: transparent url(../PrintManager/Images/bubble-charcoal.png) center center no-repeat;
+    }
+     li.charcoal a:hover {
+         padding-top: 22px;
+         padding-bottom: 22px;
+         border-radius: 500px;
+         -moz-border-radius: 500px;
+         -webkit-border-radius: 500px;
+         margin-top: -20px;
+         font-size: 16px;
+         opacity: 1.0;
+         background: transparent url(../PrintManager/Images/bubble-charcoal.png) top center no-repeat;
+    }
+     li.SpoolA a {
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlackSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolA a:hover{
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlackSpool.png) center center no-repeat;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolB a {
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlueSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolB a:hover{
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/BlueSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolC a {
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/RedSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     li.SpoolC a:hover{
+         font-family: 'Orienta', sans-serif;
+         width: 30%;
+         height: 40px;
+         background: transparent url(../PrintManager/Images/RedSpool.png) center center no-repeat;
+         font-size: 16px;
+         line-height: 30px;
+         text-transform: uppercase;
+         text-align: center;
+         float: left;
+         text-decoration: none;
+         margin-right: 5px;
+         padding: 0;
+         -moz-transition-duration: .3s;
+         -webkit-transition-duration: .3s;
+         opacity: 0.8;
+    }
+     .footer {
+         width:100%;
+         top:40px;
+         clear:both;
+    }
+}
+ 
