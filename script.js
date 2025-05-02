@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", () => openModal(item));
     if (!mobileWidth.matches) {
       item.addEventListener("mouseenter", () => {
-        handleHover(item, openModal, 2000); // 2-second hover delay as per your request
+        handleHover(item, openModal, 2000);
       });
       item.addEventListener("mouseleave", () => {
         clearTimeout(hoverTimeout);
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Featured Section
   const panels = document.querySelectorAll(".panel");
-  const backButton = document.querySelector(".back-button");
+  const backButton = document.querySelector(".back-btn");
   let currentExpanded = null;
   let touchStartY = 0;
   let isSwiping = false;
@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
         panel.addEventListener("mouseenter", () => {
           handleHover(panel, expandPanel, 2000);
         });
-        panel.addEventListener("mouseleave", () => {
+  panel.addEventListener("mouseleave", () => {
           clearTimeout(hoverTimeout);
         });
       }
