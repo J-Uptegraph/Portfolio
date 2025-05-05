@@ -1,459 +1,806 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>juptegraph.dev</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Robotics portfolio of Johnathan Uptegraph – building adaptive, human-centered robotic systems.">
-  <meta name="author" content="Johnathan Uptegraph">
-  <link rel="shortcut icon" type="image/webp" href="media/img/fav_icon.webp" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-
-<body>
+ <head>
+  <title>
+   juptegraph.dev
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Robotics portfolio of Johnathan Uptegraph – building adaptive, human-centered robotic systems." name="description"/>
+  <meta content="Johnathan Uptegraph" name="author"/>
+  <link href="media/img/fav_icon.webp" rel="shortcut icon" type="image/webp"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  </link>
+  <meta content="JUptograph Portfolio" property="og:title"/>
+  <meta content="Explore robotics and prototyping projects from Johnathan Uptegraph." property="og:description"/>
+  <meta content="/media/img/social-preview.webp" property="og:image"/>
+ </head>
+ <body>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top navbarScroll navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" id="brand" href="#">juptegraph.dev</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#featuredSection">Featured</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolioSection">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skillsSection">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#aboutSection">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contactSection">Contact</a></li>
-        </ul>
-      </div>
+   <div class="container">
+    <a class="navbar-brand" href="#" id="brand">
+     juptegraph.dev
+    </a>
+    <button class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+     <span class="navbar-toggler-icon">
+     </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+       <a class="nav-link" href="#home">
+        Home
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#featuredSection">
+        Featured
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#portfolioSection">
+        Portfolio
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#skillsSection">
+        Skills
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#aboutSection">
+        About
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#contactSection">
+        Contact
+       </a>
+      </li>
+     </ul>
     </div>
+   </div>
   </nav>
   <!-- Hero Section -->
   <section class="bgimage" id="home">
-    <div class="hero-overlay"></div>
-    <div class="container-fluid" id="homeSection">
-      <div class="row">
-        <div class="col-12 hero-text">
-          <h2 class="hero_title">
-            <span id="typingText"></span><span id="cursor1">|</span>
-          </h2>
-          <div class="hero_desc">
-            <span id="typingText2"></span><span id="cursor2">|</span>
-          </div>
-        </div>
+   <div class="hero-overlay">
+   </div>
+   <div class="container-fluid" id="homeSection">
+    <div class="row">
+     <div class="col-12 hero-text">
+      <h2 class="hero_title">
+       <span id="typingText">
+       </span>
+       <span id="cursor1">
+        |
+       </span>
+      </h2>
+      <div class="hero_desc">
+       <span id="typingText2">
+       </span>
+       <span id="cursor2">
+        |
+       </span>
       </div>
+     </div>
     </div>
-    <a id="scroll-to-section" href="#featuredSection"><i class="fas fa-chevron-down fa"></i></a>
+   </div>
+   <a href="#featuredSection" id="scroll-to-section">
+    <i class="fas fa-chevron-down fa">
+    </i>
+   </a>
   </section>
   <!-- Featured Projects Section -->
-  <section id="featuredSection" aria-label="Featured Projects">
-    <div id="featured">
-      <div id="main" role="main">
-        <!-- High-Profile EV Manufacturer -->
-        <article class="panel" data-project="evmanufacturing" aria-labelledby="evmanufacturing-title">
-          <img src="./media/img/electricvehicle.webp" alt="Robotic arm used in electric vehicle manufacturing">
-          <div class="panel-header">
-            <h3 class="panel-title" id="evmanufacturing-title">High-Profile EV Manufacturer</h3>
-            <span class="panel-date">(2023–2024)</span><br>
-          </div>
-          <div class="info-panel" role="dialog" aria-labelledby="evmanufacturing-info-title">
-            <div class="modal-header">
-              <button class="close-btn" aria-label="Close project details"><i class="fas fa-arrow-left"></i></button>
-              <h2 class="project-title" id="evmanufacturing-info-title">Robotic Edge Grinding</h2>
-            </div>
-            <div class="info-content">
-              <div class="technical-breakdown">
-                <h4 class="breakdown-title"><i class="fas fa-cogs" aria-hidden="true"></i>Project Details</h4>
-                <div class="breakdown-tags">
-                  <span class="tech-tag">25 KUKA Robots</span>
-                  <span class="tech-tag">PLC & HMI</span>
-                  <span class="tech-tag">Robot Programming</span>
-                </div>
-              </div>
-              <div class="info-details">
-                <div class="info-item">
-                  <h4 class="item-title"><i class="fas fa-project-diagram" aria-hidden="true"></i> Project Summary</h4>
-                  <p class="item-text">Helped implement a robotic automation system focused on cutting and surface finishing for electric vehicle production.</p>
-                </div>
-                <div class="info-item">
-                  <h4 class="item-title"><i class="fas fa-tools" aria-hidden="true"></i> Key Contributions</h4>
-                  <p class="item-text">Optimized robotic motion and PLC coordination, improving system uptime and throughput.</p>
-                </div>
-                <div class="info-item">
-                  <h4 class="item-title"><i class="fas fa-check-circle" aria-hidden="true"></i> Outcomes</h4>
-                  <p class="item-text">Refined over 10 EOAT trajectories, enhancing part quality and tool longevity while maintaining production standards.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Medical Device Manufacturer -->
-        <article class="panel" data-project="medicaldevice" aria-labelledby="medicaldevice-title">
-          <img src="./media/img/medical.webp" alt="Robotic welding system for medical device production">
-          <div class="panel-header">
-            <h3 class="panel-title" id="medicaldevice-title">Medical Device Manufacturer</h3>
-            <span class="panel-date">(2024–2025)</span><br>
-          </div>
-          <div class="info-panel" role="dialog" aria-labelledby="medicaldevice-info-title">
-            <div class="modal-header">
-              <button class="close-btn" aria-label="Close project details"><i class="fas fa-arrow-left"></i></button>
-              <h2 class="project-title" id="medicaldevice-info-title">Robotic Welding</h2>
-            </div>
-            <div class="info-content">
-              <div class="technical-breakdown">
-                <h4 class="breakdown-title"><i class="fas fa-cogs" aria-hidden="true"></i>Project Details</h4>
-                <div class="breakdown-tags">
-                  <span class="tech-tag">2 KUKA Robots</span>
-                  <span class="tech-tag">PLC & HMI</span>
-                  <span class="tech-tag">Robot Programming</span>
-                </div>
-              </div>
-              <div class="info-details">
-                <div class="info-item">
-                  <h4 class="item-title"><i class="fas fa-project-diagram" aria-hidden="true"></i> Project Summary</h4>
-                  <p class="item-text">Designed an integrated robotic system for welding and material handling, aiding the production of medical components.</p>
-                </div>
-                <div class="info-item">
-                  <h4 class="item-title"><i class="fas fa-tools" aria-hidden="true"></i> Key Contributions</h4>
-                  <p class="item-text">Developed real-time HMI dashboards and Modbus network infrastructure for precise part tracking and diagnostics.</p>
-                </div>
-                <div class="info-item">
-                  <h4 class="item-title"><i class="fas fa-check-circle" aria-hidden="true"></i> Outcomes</h4>
-                  <p class="item-text">Adjusted motion paths and tool configurations, reducing wear and ensuring repeatable, compliant production.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Military Defense Client -->
-        <article class="panel" data-project="defensemanufacturing" aria-labelledby="defense-title">
-          <img src="./media/img/defense.webp" alt="Robotic material handling and inspection system for defense applications">
-          <div class="panel-header">
-            <h3 class="panel-title" id="defense-title">Military Defense Contract</h3>
-            <span class="panel-date">(2025–2026)</span><br>
-          </div>
-          <div class="info-panel" role="dialog" aria-labelledby="defense-info-title">
-            <div class="modal-header">
-              <button class="close-btn" aria-label="Close project details"><i class="fas fa-arrow-left"></i></button>
-              <h2 class="project-title" id="defense-info-title">Robotic Part Inspection</h2>
-            </div>
-            <div class="info-content">
-              <div class="technical-breakdown">
-                <h4 class="breakdown-title"><i class="fas fa-cogs" aria-hidden="true"></i>Project Details</h4>
-                <div class="breakdown-tags">
-                  <span class="tech-tag">10 FANUC Robots</span>
-                  <span class="tech-tag">Path Programming</span>
-                  <span class="tech-tag">RoboGuide</span>
-                </div>
-              </div>
-              <div class="info-details">
-                <div class="info-item">
-                  <h4 class="item-title"><i class="fas fa-project-diagram" aria-hidden="true"></i> Project Summary</h4>
-                  <p class="item-text">Developed and managed a multi-robot system for secure material transfer and inspection in defense manufacturing.</p>
-                </div>
-                <div class="info-item">
-                  <h4 class="item-title"><i class="fas fa-tools" aria-hidden="true"></i> Key Contributions</h4>
-                  <p class="item-text">Optimized robot cycle times and refined PLC logic to improve system performance and efficiency.</p>
-                </div>
-                <div class="info-item">
-                  <h4 class="item-title"><i class="fas fa-check-circle" aria-hidden="true"></i> Outcomes</h4>
-                  <p class="item-text">Enhanced operational reliability by addressing logic and HMI integration challenges in safety-critical environments.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+  <section aria-label="Featured Projects" id="featuredSection">
+   <div id="featured">
+    <div id="main" role="main">
+     <!-- High-Profile EV Manufacturer -->
+     <article aria-labelledby="evmanufacturing-title" class="panel" data-project="evmanufacturing">
+      <img alt="Robotic arm used in electric vehicle manufacturing" height="auto" loading="lazy" src="./media/img/electricvehicle.webp" width="100%"/>
+      <div class="panel-header">
+       <h3 class="panel-title" id="evmanufacturing-title">
+        High-Profile EV Manufacturer
+       </h3>
+       <span class="panel-date">
+        (2023–2024)
+       </span>
+       <br/>
       </div>
+      <div aria-labelledby="evmanufacturing-info-title" class="info-panel" role="dialog">
+       <div class="modal-header">
+        <button aria-label="Close project details" class="close-btn">
+         <i class="fas fa-arrow-left">
+         </i>
+        </button>
+        <h2 class="project-title" id="evmanufacturing-info-title">
+         Robotic Edge Grinding
+        </h2>
+       </div>
+       <div class="info-content">
+        <div class="technical-breakdown">
+         <h4 class="breakdown-title">
+          <i aria-hidden="true" class="fas fa-cogs">
+          </i>
+          Project Details
+         </h4>
+         <div class="breakdown-tags">
+          <span class="tech-tag">
+           25 KUKA Robots
+          </span>
+          <span class="tech-tag">
+           PLC &amp; HMI
+          </span>
+          <span class="tech-tag">
+           Robot Programming
+          </span>
+         </div>
+        </div>
+        <div class="info-details">
+         <div class="info-item">
+          <h4 class="item-title">
+           <i aria-hidden="true" class="fas fa-project-diagram">
+           </i>
+           Project Summary
+          </h4>
+          <p class="item-text">
+           Helped implement a robotic automation system focused on cutting and surface finishing for electric vehicle production.
+          </p>
+         </div>
+         <div class="info-item">
+          <h4 class="item-title">
+           <i aria-hidden="true" class="fas fa-tools">
+           </i>
+           Key Contributions
+          </h4>
+          <p class="item-text">
+           Optimized robotic motion and PLC coordination, improving system uptime and throughput.
+          </p>
+         </div>
+         <div class="info-item">
+          <h4 class="item-title">
+           <i aria-hidden="true" class="fas fa-check-circle">
+           </i>
+           Outcomes
+          </h4>
+          <p class="item-text">
+           Refined over 10 EOAT trajectories, enhancing part quality and tool longevity while maintaining production standards.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </article>
+     <!-- Medical Device Manufacturer -->
+     <article aria-labelledby="medicaldevice-title" class="panel" data-project="medicaldevice">
+      <img alt="Robotic welding system for medical device production" height="auto" loading="lazy" src="./media/img/medical.webp" width="100%"/>
+      <div class="panel-header">
+       <h3 class="panel-title" id="medicaldevice-title">
+        Medical Device Manufacturer
+       </h3>
+       <span class="panel-date">
+        (2024–2025)
+       </span>
+       <br/>
+      </div>
+      <div aria-labelledby="medicaldevice-info-title" class="info-panel" role="dialog">
+       <div class="modal-header">
+        <button aria-label="Close project details" class="close-btn">
+         <i class="fas fa-arrow-left">
+         </i>
+        </button>
+        <h2 class="project-title" id="medicaldevice-info-title">
+         Robotic Welding
+        </h2>
+       </div>
+       <div class="info-content">
+        <div class="technical-breakdown">
+         <h4 class="breakdown-title">
+          <i aria-hidden="true" class="fas fa-cogs">
+          </i>
+          Project Details
+         </h4>
+         <div class="breakdown-tags">
+          <span class="tech-tag">
+           2 KUKA Robots
+          </span>
+          <span class="tech-tag">
+           PLC &amp; HMI
+          </span>
+          <span class="tech-tag">
+           Robot Programming
+          </span>
+         </div>
+        </div>
+        <div class="info-details">
+         <div class="info-item">
+          <h4 class="item-title">
+           <i aria-hidden="true" class="fas fa-project-diagram">
+           </i>
+           Project Summary
+          </h4>
+          <p class="item-text">
+           Designed an integrated robotic system for welding and material handling, aiding the production of medical components.
+          </p>
+         </div>
+         <div class="info-item">
+          <h4 class="item-title">
+           <i aria-hidden="true" class="fas fa-tools">
+           </i>
+           Key Contributions
+          </h4>
+          <p class="item-text">
+           Developed real-time HMI dashboards and Modbus network infrastructure for precise part tracking and diagnostics.
+          </p>
+         </div>
+         <div class="info-item">
+          <h4 class="item-title">
+           <i aria-hidden="true" class="fas fa-check-circle">
+           </i>
+           Outcomes
+          </h4>
+          <p class="item-text">
+           Adjusted motion paths and tool configurations, reducing wear and ensuring repeatable, compliant production.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </article>
+     <!-- Military Defense Client -->
+     <article aria-labelledby="defense-title" class="panel" data-project="defensemanufacturing">
+      <img alt="Robotic material handling and inspection system for defense applications" height="auto" loading="lazy" src="./media/img/defense.webp" width="100%"/>
+      <div class="panel-header">
+       <h3 class="panel-title" id="defense-title">
+        Military Defense Contract
+       </h3>
+       <span class="panel-date">
+        (2025–2026)
+       </span>
+       <br/>
+      </div>
+      <div aria-labelledby="defense-info-title" class="info-panel" role="dialog">
+       <div class="modal-header">
+        <button aria-label="Close project details" class="close-btn">
+         <i class="fas fa-arrow-left">
+         </i>
+        </button>
+        <h2 class="project-title" id="defense-info-title">
+         Robotic Part Inspection
+        </h2>
+       </div>
+       <div class="info-content">
+        <div class="technical-breakdown">
+         <h4 class="breakdown-title">
+          <i aria-hidden="true" class="fas fa-cogs">
+          </i>
+          Project Details
+         </h4>
+         <div class="breakdown-tags">
+          <span class="tech-tag">
+           10 FANUC Robots
+          </span>
+          <span class="tech-tag">
+           Path Programming
+          </span>
+          <span class="tech-tag">
+           RoboGuide
+          </span>
+         </div>
+        </div>
+        <div class="info-details">
+         <div class="info-item">
+          <h4 class="item-title">
+           <i aria-hidden="true" class="fas fa-project-diagram">
+           </i>
+           Project Summary
+          </h4>
+          <p class="item-text">
+           Developed and managed a multi-robot system for secure material transfer and inspection in defense manufacturing.
+          </p>
+         </div>
+         <div class="info-item">
+          <h4 class="item-title">
+           <i aria-hidden="true" class="fas fa-tools">
+           </i>
+           Key Contributions
+          </h4>
+          <p class="item-text">
+           Optimized robot cycle times and refined PLC logic to improve system performance and efficiency.
+          </p>
+         </div>
+         <div class="info-item">
+          <h4 class="item-title">
+           <i aria-hidden="true" class="fas fa-check-circle">
+           </i>
+           Outcomes
+          </h4>
+          <p class="item-text">
+           Enhanced operational reliability by addressing logic and HMI integration challenges in safety-critical environments.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </article>
     </div>
+   </div>
   </section>
   <!-- Portfolio Section -->
-  <br id="portfolioSection">
+  <br id="portfolioSection"/>
   <section id="portfolio">
-    <h1 class="text-center">Portfolio</h1>
-    <div class="container" id="portfolioContainer">
-      <!-- Portfolio items will be dynamically inserted here -->
-    </div>
-    <div id="preview" class="modal">
-      <div class="modal-content">
-        <div class="modal-close" id="closeButton"><i class="fas fa-arrow-left"></i></div>
-        <img id="modalImg" src="" alt="Project Image">
-        <div id="details">
-          <h5 id="title"></h5>
-          <p id="info"></p>
-          <p id="skills"></p>
-          <div class="details-buttons">
-            <div class="button" id="live">View Project</div>
-            <i id="github"></i>
-          </div>
-        </div>
+   <h1 class="text-center">
+    Portfolio
+   </h1>
+   <div class="container" id="portfolioContainer">
+    <!-- Portfolio items will be dynamically inserted here -->
+   </div>
+   <div class="modal" id="preview">
+    <div class="modal-content">
+     <div class="modal-close" id="closeButton">
+      <i class="fas fa-arrow-left">
+      </i>
+     </div>
+     <img alt="Project Image" height="auto" id="modalImg" loading="lazy" src="" width="100%"/>
+     <div id="details">
+      <h5 id="title">
+      </h5>
+      <p id="info">
+      </p>
+      <p id="skills">
+      </p>
+      <div class="details-buttons">
+       <div class="button" id="live">
+        View Project
+       </div>
+       <i id="github">
+       </i>
       </div>
+     </div>
     </div>
+   </div>
   </section>
   <!-- Skills Section -->
-  <br id="skillsSection">
+  <br id="skillsSection"/>
   <section id="mySkills">
-    <div class="container">
-      <h1 class="text-center">Skills</h1>
-      <!-- First Row -->
-      <div class="row">
-        <!-- Robotic Systems -->
-        <div class="col-lg-4 mt-4">
-          <div class="card servicesText">
-            <div class="card-body">
-              <i class="fas servicesIcon fa-robot"></i>
-              <h4 class="card-title mt-3">Robotic Systems</h4>
-              <p class="card-text mt-3"></p>
-              <ul>
-                <li>KUKA, ABB, Fanuc Robots</li>
-                <li>RobotStudio, RoboGuide</li>
-                <li>KUKA KRL</li>
-                <li>Motion Planning & Optimization</li>
-                <li>Multi-Robot Coordination</li>
-                <li>ROS 2 (Learning)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Automation & Controls -->
-        <div class="col-lg-4 mt-4">
-          <div class="card servicesText">
-            <div class="card-body">
-              <i class="fas servicesIcon fa-cogs"></i>
-              <h4 class="card-title mt-3">Automation & Controls</h4>
-              <p class="card-text mt-3"></p>
-              <ul>
-                <li>PLC Programming (Siemens, Rockwell)</li>
-                <li>HMI Development</li>
-                <li>Modbus Networking</li>
-                <li>Safety Logic & IO Blocks</li>
-                <li>EPLAN Electric P8</li>
-                <li>FANUC Handling Tool</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Programming -->
-        <div class="col-lg-4 mt-4">
-          <div class="card servicesText">
-            <div class="card-body">
-              <i class="fas servicesIcon fa-laptop-code"></i>
-              <h4 class="card-title mt-3">Programming</h4>
-              <p class="card-text mt-3"></p>
-              <ul>
-                <li>Python, C++, C#, Java</li>
-                <li>JavaScript, TypeScript</li>
-                <li>HTML, CSS, SQL</li>
-                <li>Swift, React.js</li>
-                <li>Pandas, MATLAB</li>
-                <li>Arduino C</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+   <div class="container">
+    <h1 class="text-center">
+     Skills
+    </h1>
+    <!-- First Row -->
+    <div class="row">
+     <!-- Robotic Systems -->
+     <div class="col-lg-4 mt-4">
+      <div class="card servicesText">
+       <div class="card-body">
+        <i class="fas servicesIcon fa-robot">
+        </i>
+        <h4 class="card-title mt-3">
+         Robotic Systems
+        </h4>
+        <p class="card-text mt-3">
+        </p>
+        <ul>
+         <li>
+          KUKA KRL
+         </li>
+         <li>
+          KUKA, ABB, Fanuc Robots
+         </li>
+         <li>
+          Motion Planning &amp; Optimization
+         </li>
+         <li>
+          Multi-Robot Coordination
+         </li>
+         <li>
+          RobotStudio, RoboGuide
+         </li>
+         <li>
+          ROS 2 (Learning)
+         </li>
+        </ul>
+       </div>
       </div>
-      <!-- Second Row -->
-      <div class="row">
-        <!-- Prototyping & Hardware -->
-        <div class="col-lg-4 mt-4">
-          <div class="card servicesText">
-            <div class="card-body">
-              <i class="fas servicesIcon fa-wrench"></i>
-              <h4 class="card-title mt-3">Prototyping & Hardware</h4>
-              <p class="card-text mt-3"></p>
-              <ul>
-                <li>Raspberry Pi, ESP32, Arduino</li>
-                <li>CAD (Fusion 360, TinkerCAD)</li>
-                <li>3D Printing (PLA, ABS)</li>
-                <li>PrusaSlicer, OctoPi</li>
-                <li>Circuit Analysis & Soldering</li>
-                <li>Verilog</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- 3D Modeling & Simulation -->
-        <div class="col-lg-4 mt-4">
-          <div class="card servicesText">
-            <div class="card-body">
-              <i class="fas servicesIcon fa-layer-group"></i>
-              <h4 class="card-title mt-3">3D Modeling & Simulation</h4>
-              <p class="card-text mt-3"></p>
-              <ul>
-                <li>Unity, Unreal Engine 4</li>
-                <li>Maya, Blender</li>
-                <li>Autodesk Fusion 360</li>
-                <li>RobotStudio, RoboGuide</li>
-                <li>Blueprint Visual Scripting</li>
-                <li>Physics Engine Integration</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Human/Robot Interaction -->
-        <div class="col-lg-4 mt-4">
-          <div class="card servicesText">
-            <div class="card-body">
-              <i class="fas servicesIcon fa-users"></i>
-              <h4 class="card-title mt-3">Human/Robot Interaction</h4>
-              <p class="card-text mt-3"></p>
-              <ul>
-                <li>Pepper, Furhat Robots</li>
-                <li>Choregraphe Suite</li>
-                <li>Computer Vision</li>
-                <li>User Research & Testing</li>
-                <li>Assistive Robotics</li>
-                <li>HRI System Design</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+     </div>
+     <!-- Automation & Controls -->
+     <div class="col-lg-4 mt-4">
+      <div class="card servicesText">
+       <div class="card-body">
+        <i class="fas servicesIcon fa-cogs">
+        </i>
+        <h4 class="card-title mt-3">
+         Automation &amp; Controls
+        </h4>
+        <p class="card-text mt-3">
+        </p>
+        <ul>
+         <li>
+          EPLAN Electric P8
+         </li>
+         <li>
+          FANUC Handling Tool
+         </li>
+         <li>
+          HMI Development
+         </li>
+         <li>
+          Modbus Networking
+         </li>
+         <li>
+          PLC Programming (Siemens, Rockwell)
+         </li>
+         <li>
+          Safety Logic &amp; IO Blocks
+         </li>
+        </ul>
+       </div>
       </div>
-      <!-- Third Row -->
-      <div class="row">
-        <!-- UX/UI Design -->
-        <div class="col-lg-4 mt-4">
-          <div class="card servicesText">
-            <div class="card-body">
-              <i class="fas servicesIcon fa-user-check"></i>
-              <h4 class="card-title mt-3">UX/UI Design</h4>
-              <p class="card-text mt-3"></p>
-              <ul>
-                <li>Figma, Adobe Creative Cloud</li>
-                <li>Canva, XCode</li>
-                <li>SwiftUI, UIKit</li>
-                <li>User Testing & Prototyping</li>
-                <li>Wireframing & Mockups</li>
-                <li>Accessibility Design</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Data Analytics -->
-        <div class="col-lg-4 mt-4">
-          <div class="card servicesText">
-            <div class="card-body">
-              <i class="fas servicesIcon fa-search"></i>
-              <h4 class="card-title mt-3">Data Analytics</h4>
-              <p class="card-text mt-3"></p>
-              <ul>
-                <li>Google Analytics</li>
-                <li>Tableau, Microsoft Excel</li>
-                <li>Similar Web, Rival IQ</li>
-                <li>Pandas for Data Analysis</li>
-                <li>Feature Extraction</li>
-                <li>SQL Queries</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Leadership & Communication -->
-        <div class="col-lg-4 mt-4">
-          <div class="card servicesText">
-            <div class="card-body">
-              <i class="fas servicesIcon fa-handshake"></i>
-              <h4 class="card-title mt-3">Leadership & Communication</h4>
-              <p class="card-text mt-3"></p>
-              <ul>
-                <li>Project Leadership</li>
-                <li>Cross-Functional Collaboration</li>
-                <li>Mentoring & Teaching</li>
-                <li>Technical Presentations</li>
-                <li>Stakeholder Alignment</li>
-                <li>Team Coordination</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+     </div>
+     <!-- Programming -->
+     <div class="col-lg-4 mt-4">
+      <div class="card servicesText">
+       <div class="card-body">
+        <i class="fas servicesIcon fa-laptop-code">
+        </i>
+        <h4 class="card-title mt-3">
+         Programming
+        </h4>
+        <p class="card-text mt-3">
+        </p>
+        <ul>
+         <li>
+          Arduino C
+         </li>
+         <li>
+          HTML, CSS, SQL
+         </li>
+         <li>
+          JavaScript, TypeScript
+         </li>
+         <li>
+          Pandas, MATLAB
+         </li>
+         <li>
+          Python, C++, C#, Java
+         </li>
+         <li>
+          Swift, React.js
+         </li>
+        </ul>
+       </div>
       </div>
+     </div>
     </div>
+    <!-- Second Row -->
+    <div class="row">
+     <!-- Prototyping & Hardware -->
+     <div class="col-lg-4 mt-4">
+      <div class="card servicesText">
+       <div class="card-body">
+        <i class="fas servicesIcon fa-wrench">
+        </i>
+        <h4 class="card-title mt-3">
+         Prototyping &amp; Hardware
+        </h4>
+        <p class="card-text mt-3">
+        </p>
+        <ul>
+         <li>
+          3D Printing (PLA, ABS)
+         </li>
+         <li>
+          CAD (Fusion 360, TinkerCAD)
+         </li>
+         <li>
+          Circuit Analysis &amp; Soldering
+         </li>
+         <li>
+          PrusaSlicer, OctoPi
+         </li>
+         <li>
+          Raspberry Pi, ESP32, Arduino
+         </li>
+         <li>
+          Verilog
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- 3D Modeling & Simulation -->
+     <div class="col-lg-4 mt-4">
+      <div class="card servicesText">
+       <div class="card-body">
+        <i class="fas servicesIcon fa-layer-group">
+        </i>
+        <h4 class="card-title mt-3">
+         3D Modeling &amp; Simulation
+        </h4>
+        <p class="card-text mt-3">
+        </p>
+        <ul>
+         <li>
+          Autodesk Fusion 360
+         </li>
+         <li>
+          Blueprint Visual Scripting
+         </li>
+         <li>
+          Maya, Blender
+         </li>
+         <li>
+          Physics Engine Integration
+         </li>
+         <li>
+          RobotStudio, RoboGuide
+         </li>
+         <li>
+          Unity, Unreal Engine 4
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- Human/Robot Interaction -->
+     <div class="col-lg-4 mt-4">
+      <div class="card servicesText">
+       <div class="card-body">
+        <i class="fas servicesIcon fa-users">
+        </i>
+        <h4 class="card-title mt-3">
+         Human/Robot Interaction
+        </h4>
+        <p class="card-text mt-3">
+        </p>
+        <ul>
+         <li>
+          Assistive Robotics
+         </li>
+         <li>
+          Choregraphe Suite
+         </li>
+         <li>
+          Computer Vision
+         </li>
+         <li>
+          HRI System Design
+         </li>
+         <li>
+          Pepper, Furhat Robots
+         </li>
+         <li>
+          User Research &amp; Testing
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Third Row -->
+    <div class="row">
+     <!-- UX/UI Design -->
+     <div class="col-lg-4 mt-4">
+      <div class="card servicesText">
+       <div class="card-body">
+        <i class="fas servicesIcon fa-user-check">
+        </i>
+        <h4 class="card-title mt-3">
+         UX/UI Design
+        </h4>
+        <p class="card-text mt-3">
+        </p>
+        <ul>
+         <li>
+          Accessibility Design
+         </li>
+         <li>
+          Canva, XCode
+         </li>
+         <li>
+          Figma, Adobe Creative Cloud
+         </li>
+         <li>
+          SwiftUI, UIKit
+         </li>
+         <li>
+          User Testing &amp; Prototyping
+         </li>
+         <li>
+          Wireframing &amp; Mockups
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- Data Analytics -->
+     <div class="col-lg-4 mt-4">
+      <div class="card servicesText">
+       <div class="card-body">
+        <i class="fas servicesIcon fa-search">
+        </i>
+        <h4 class="card-title mt-3">
+         Data Analytics
+        </h4>
+        <p class="card-text mt-3">
+        </p>
+        <ul>
+         <li>
+          Feature Extraction
+         </li>
+         <li>
+          Google Analytics
+         </li>
+         <li>
+          Pandas for Data Analysis
+         </li>
+         <li>
+          Similar Web, Rival IQ
+         </li>
+         <li>
+          SQL Queries
+         </li>
+         <li>
+          Tableau, Microsoft Excel
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- Leadership & Communication -->
+     <div class="col-lg-4 mt-4">
+      <div class="card servicesText">
+       <div class="card-body">
+        <i class="fas servicesIcon fa-handshake">
+        </i>
+        <h4 class="card-title mt-3">
+         Leadership &amp; Communication
+        </h4>
+        <p class="card-text mt-3">
+        </p>
+        <ul>
+         <li>
+          Cross-Functional Collaboration
+         </li>
+         <li>
+          Mentoring &amp; Teaching
+         </li>
+         <li>
+          Project Leadership
+         </li>
+         <li>
+          Stakeholder Alignment
+         </li>
+         <li>
+          Team Coordination
+         </li>
+         <li>
+          Technical Presentations
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
   </section>
   <!-- About Section -->
   <section id="aboutSection">
-    <div class="container about-container">
-      <div class="about-content">
-        <div class="about-image">
-          <img src="./media/img/headshotrectangle.webp" alt="Professional headshot of Johnathan Uptegraph">
-        </div>
-        <div class="about-text">
-          <h2 class="about-name">Johnathan Uptegraph</h2>
-          <h3 class="about-title">Robotics Engineer & Mechatronics Specialist</h3>
-          <div class="about-description">
-            <p>I’m Johnathan Uptegraph, a robotics engineer and mechatronics specialist dedicated to creating impactful, human-centered systems through precision engineering and innovative problem-solving.</p>
-            <p>My career thrives on tackling high-stakes challenges and bridging technical disciplines. I’ve led multi-robot deployments, developed standardized PLC architectures, and turned around failing systems to meet production goals.</p>
-            <p>I’m driven to push the boundaries of R&D, prototyping, and frontier robotics. Let’s collaborate to build something extraordinary—check out my full experience in my <a href="./media/images/Johnathan%20Uptegraph%20Portfolio%20Resume.pdf" target="_blank">resume</a>.</p>
-          </div>
-        </div>
+   <div class="container about-container">
+    <div class="about-content">
+     <div class="about-image">
+      <img alt="Professional headshot of Johnathan Uptegraph" height="auto" loading="lazy" src="./media/img/headshotrectangle.webp" width="100%"/>
+     </div>
+     <div class="about-text">
+      <h2 class="about-name">
+       Johnathan Uptegraph
+      </h2>
+      <h3 class="about-title">
+       Robotics Engineer &amp; Mechatronics Specialist
+      </h3>
+      <div class="about-description">
+       <p>
+        I’m Johnathan Uptegraph, a robotics engineer and mechatronics specialist dedicated to creating impactful, human-centered systems through precision engineering and innovative problem-solving.
+       </p>
+       <p>
+        My career thrives on tackling high-stakes challenges and bridging technical disciplines. I’ve led multi-robot deployments, developed standardized PLC architectures, and turned around failing systems to meet production goals.
+       </p>
+       <p>
+        I’m driven to push the boundaries of R&amp;D, prototyping, and frontier robotics. Let’s collaborate to build something extraordinary—check out my full experience in my
+        <a href="./media/images/Johnathan%20Uptegraph%20Portfolio%20Resume.pdf" target="_blank">
+         resume
+        </a>
+        .
+       </p>
       </div>
+     </div>
     </div>
+   </div>
   </section>
   <!-- Contact Section -->
-  <br id="contactSection">
+  <br id="contactSection"/>
   <section id="contact">
-    <div class="container mt-3 contact">
-      <h1 class="text-center">Contact</h1>
-      <h5 class="text-center">Feel free to send me a message</h5>
-      <form action="https://formsubmit.co/jwuptegraph@gmail.com" method="post">
-        <input type="hidden" name="_subject" value="JUptegraph Contact Us">
-        <input class="form-control" type="email" name="Email:" placeholder="Your E-mail Address" required="">
-        <input class="form-control" type="subject" name="Subject:" placeholder="Subject" required="">
-        <textarea class="form-control" rows="5" id="comment" name="Message:" placeholder="Write Message"></textarea>
-        <input class="form-control" type="subject" name="Name of Sender:" placeholder="Your Name">
-        <input type="hidden" name="_next" value="https://juportfolio.com/thankyou.html">
-        <button type="submit" class="btn btn-secondary btn-medium mt-3">Send</button>
-      </form>
-    </div>
+   <div class="container mt-3 contact">
+    <h1 class="text-center">
+     Contact
+    </h1>
+    <h5 class="text-center">
+     Feel free to send me a message
+    </h5>
+    <form action="https://formsubmit.co/jwuptegraph@gmail.com" method="post">
+     <input name="_subject" type="hidden" value="JUptegraph Contact Us"/>
+     <input class="form-control" name="Email:" placeholder="Your E-mail Address" required="" type="email"/>
+     <input class="form-control" name="Subject:" placeholder="Subject" required="" type="subject"/>
+     <textarea class="form-control" id="comment" name="Message:" placeholder="Write Message" rows="5"></textarea>
+     <input class="form-control" name="Name of Sender:" placeholder="Your Name" type="subject"/>
+     <input name="_next" type="hidden" value="https://juportfolio.com/thankyou.html"/>
+     <button class="btn btn-secondary btn-medium mt-3" type="submit">
+      Send
+     </button>
+    </form>
+   </div>
   </section>
   <!-- FOOTER -->
   <footer id="footer">
-    <div class="container-fluid">
-      <div class="footer-content">
-        <div class="footer-buttons">
-          <a href="./media/images/Johnathan%20Uptegraph%20Portfolio%20Resume.pdf" class="btn footer-btn"
-            target="_blank">
-            <i class="fas fa-file-alt"></i> View Resume
-          </a>
-          <a href="https://github.com/J-Uptegraph/portfolio" class="btn footer-btn" target="_blank">
-            <i class="fas fa-code"></i> Website Code
-          </a>
-        </div>
-        <div class="theme-toggle-container">
-          <span class="theme-label light-label">Light Mode</span>
-          <label class="theme-toggle" for="themeToggle">
-            <input type="checkbox" id="themeToggle" aria-label="Toggle between light and dark mode" />
-            <span class="slider"></span>
-          </label>
-          <span class="theme-label dark-label">Dark Mode</span>
-        </div>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/johnathan-uptegraph-270576191" target="_blank"><i
-              class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/J-Uptegraph" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-        <div class="footer-bottom">
-          <div id="copyright">
-            Built, Designed, and Engineered by Johnathan Uptegraph | © 2025 juptegraph.dev
-          </div>
-          <div id="disclaimer">
-            Project descriptions have been generalized to maintain confidentiality and exclude any proprietary details.
+   <div class="container-fluid">
+    <div class="footer-content">
+     <div class="footer-buttons">
+      <a class="btn footer-btn" href="./media/images/Johnathan%20Uptegraph%20Portfolio%20Resume.pdf" target="_blank">
+       <i class="fas fa-file-alt">
+       </i>
+       View Resume
+      </a>
+      <a class="btn footer-btn" href="https://github.com/J-Uptegraph/portfolio" target="_blank">
+       <i class="fas fa-code">
+       </i>
+       Website Code
+      </a>
+     </div>
+     <div class="theme-toggle-container">
+      <span class="theme-label light-label">
+       Light Mode
+      </span>
+      <label class="theme-toggle" for="themeToggle">
+       <input aria-label="Toggle between light and dark mode" id="themeToggle" type="checkbox">
+        <span class="slider">
+        </span>
+       </input>
+      </label>
+      <span class="theme-label dark-label">
+       Dark Mode
+      </span>
+     </div>
+     <div class="social-icons">
+      <a href="https://www.linkedin.com/in/johnathan-uptegraph-270576191" target="_blank">
+       <i class="fab fa-linkedin">
+       </i>
+      </a>
+      <a href="https://github.com/J-Uptegraph" target="_blank">
+       <i class="fab fa-github">
+       </i>
+      </a>
+     </div>
+     <div class="footer-bottom">
+      <div id="copyright">
+       Built, Designed, and Engineered by Johnathan Uptegraph | © 2025 juptegraph.dev
+      </div>
+      <div id="disclaimer">
+       Project descriptions have been generalized to maintain confidentiality and exclude any proprietary details.
             All images are AI-generated representations intended to preserve client privacy while reflecting the essence
             of real-world projects.
-          </div>
-        </div>
       </div>
+     </div>
     </div>
+   </div>
   </footer>
   <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./data/modalInfo.js"></script>
-  <script src="script.js"></script>
-</body>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="./data/modalInfo.js">
+  </script>
+  <script src="script.js">
+  </script>
+ </body>
 </html>

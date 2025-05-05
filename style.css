@@ -1055,3 +1055,49 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
 .dark-mode #disclaimer { color: #bbb; }
 .dark-mode form .form-control { border: 2px solid #73aa2d; }
 .dark-mode .featured-title { color: #e0e0e0; }
+
+
+/* Button consistency in dark mode */
+.dark-mode .btn,
+.dark-mode .button,
+.dark-mode .close-btn,
+.dark-mode .social-btn {
+    background-color: #1E7A4D;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .btn:hover,
+.dark-mode .button:hover,
+.dark-mode .close-btn:hover,
+.dark-mode .social-btn:hover {
+    background-color: #16653C;
+}
+
+.dark-mode .social-btn i {
+    color: #fff;
+}
+
+
+/* Mobile UX: Larger tap targets */
+button,
+a.button,
+.social-btn {
+    min-width: 48px;
+    min-height: 48px;
+    margin-bottom: 12px;
+}
+
+/* Hamburger menu open state */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+}
+
+.menu-open .menu-overlay {
+    display: block;
+}

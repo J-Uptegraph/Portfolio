@@ -404,3 +404,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+// Accessibility for hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const overlay = document.createElement('div');
+overlay.className = 'menu-overlay';
+document.body.appendChild(overlay);
+
+hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+  document.body.classList.toggle('menu-open');
+  navMenu.classList.toggle('active');
+});
+
+// Close on ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
+    document.body.classList.remove('menu-open');
+    navMenu.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', false);
+  }
+});
+
+// Close on overlay click
+overlay.addEventListener('click', () => {
+  document.body.classList.remove('menu-open');
+  navMenu.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', false);
+});
