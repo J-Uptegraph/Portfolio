@@ -35,7 +35,7 @@ const modalInfo = {
     "title": "OctoPrint Mobile App",
     "info": "Created a Swift-based mobile app for remote 3D printer monitoring and control using the OctoPrint API. Built interactive UI with real-time job status updates and temperature readouts.",
     "link": "https://drive.google.com/file/d/1dIeoOIwAxI322oDJgfRVGOVz58Jdgvl7/view?usp=sharing",
-    "github": "https://github.com/J-Uptegraph/Mobile-Application-Programming/tree/main/Week_07/OctoprintRD/OctoprintRD",
+    "github": "https://github.com/J-Uptegraph/OctoPrint-Mobile-App",
     "skills": ["Swift", "Mobile Development", "API Integration", "3D Printing", "UI Design"],
     "imgSource": "./media/img/Octoprint2.webp"
   },
