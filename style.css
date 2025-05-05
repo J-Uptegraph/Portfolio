@@ -65,10 +65,11 @@ html { scroll-padding-top: 80px; }
   transform: translateX(22px);
 }
 
-.about-container {
-  margin: 6rem auto;
+.about-container { 
+  margin: 6rem auto; 
   padding: 2rem;
   background: #fff;
+  position: relative;
   max-width: 1200px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -76,73 +77,62 @@ html { scroll-padding-top: 80px; }
   flex-direction: column;
   align-items: center;
 }
-
 .about-content {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   min-height: 500px;
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
-  gap: 2rem;
 }
-
-.about-image {
+.about-image { 
   width: 35%;
   max-width: 350px;
   height: 400px;
+  margin-left: 2rem;
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
 }
-
 .about-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.about-text {
+.about-text { 
+  padding-left: 70px;
   flex: 1;
   padding: 1rem;
   opacity: 0;
   animation: fadeInText 1s ease-out forwards 0.3s;
 }
-
-.about-name {
+.about-text h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #1f1e20;
   margin-bottom: 0.5rem;
-  text-align: left;
 }
-
-.about-title {
-  font-size: 1.5rem;
+.about-text h3 {
+  font-size: 1.3rem;
   font-weight: 400;
   color: #73aa2d;
   margin-bottom: 1.5rem;
-  text-align: left;
 }
-
-.about-description p {
+.about-text p {
+  padding-left: 70px;
   font-size: 1rem;
   line-height: 1.7;
   color: #555;
   margin-bottom: 1.2rem;
 }
-
 .about-text a {
   color: #73aa2d;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
-.about-text a:hover {
-  color: #5a8b24;
-}
+.about-text a:hover { color: #5a8b24; }
 
 @keyframes fadeInText {
   0% { opacity: 0; transform: translateX(20px); }
@@ -150,37 +140,22 @@ html { scroll-padding-top: 80px; }
 }
 
 @media (max-width: 991px) {
-  .about-container {
-    margin: 4rem auto;
-    padding: 1.5rem;
+  .about-container { margin: 4rem auto; padding: 1.5rem; }
+  .about-content { flex-direction: column; min-height: auto; }
+  .about-image { 
+    width: 100%; 
+    max-width: 350px; 
+    height: 300px; 
+    margin: 0 auto 2rem; 
   }
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    min-height: auto;
+  .about-text { 
+    margin: 0; 
+    padding: 0; 
+    text-align: left; 
   }
-  .about-image {
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    margin: 0 auto 2rem;
-  }
-  .about-text {
-    padding: 0;
-    text-align: center;
-  }
-  .about-name {
-    font-size: 2rem;
-    text-align: center;
-  }
-  .about-title {
-    font-size: 1.3rem;
-    text-align: center;
-  }
-  .about-description p {
-    font-size: 0.95rem;
-    text-align: left;
-  }
+  .about-text h2 { font-size: 2rem; }
+  .about-text h3 { font-size: 1.1rem; }
+  .about-text p { font-size: 0.95rem; }
 }
 
 .bgimage {
@@ -204,14 +179,14 @@ html { scroll-padding-top: 80px; }
   color: #fff;
   z-index: 2;
 }
-.hero_title {
-  font-size: 3rem;
+.hero_title { 
+  font-size: 3rem; 
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.hero_desc {
+.hero_desc { 
   font-size: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 1rem; 
   font-weight: 300;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -240,10 +215,10 @@ html { scroll-padding-top: 80px; }
 }
 
 .navbarScroll.navbarDark { background-color: black; }
-.nav-link {
-  font-size: large;
-  color: white;
-  cursor: pointer;
+.nav-link { 
+  font-size: large; 
+  color: white; 
+  cursor: pointer; 
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
 }
@@ -636,9 +611,6 @@ body:not(.dark-mode) .tech-tag {
   width: 50%;
   margin: 20px auto;
   padding: 12px;
-  border: none;
-  font-size: 0.9rem;
-  font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
 #portfolio .item:hover .button { background-color: #73aa2d; }
@@ -781,12 +753,10 @@ body:not(.dark-mode) .skill-tag {
   color: white;
   padding: 12px 20px;
   border-radius: 6px;
-  border: none;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1rem;
   transition: background 0.3s;
-  height: 40px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -798,10 +768,9 @@ body:not(.dark-mode) .skill-tag {
   color: white;
   font-size: 1.2rem;
   padding: 0;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 6px;
-  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -847,13 +816,9 @@ form button[type="submit"] {
   background: #1f1e20;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  padding: 0.75rem;
+  border-radius: 4px;
   margin-top: 1rem;
-  height: 40px;
-  line-height: 1;
 }
 form button[type="submit"]:hover { background: #73aa2d; }
 
@@ -1027,13 +992,13 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
   color: #e0e0e0;
   background: rgba(0, 0, 0, 0.7);
 }
-.dark-mode .info-panel {
+.dark-mode .info-panel { 
   background: #1f1e20;
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
 }
 .dark-mode .modal-header .project-title { color: #e0e0e0; }
 .dark-mode .project-date { color: #bbb; }
-.dark-mode .info-item {
+.dark-mode .info-item { 
   background: #2a2a2a;
   border: 1px solid #73aa2d;
 }
@@ -1063,18 +1028,6 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
 .dark-mode #details i,
 .dark-mode form button[type="submit"] {
   background: #73aa2d;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-  height: 40px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .dark-mode #portfolio .item .button:hover,
 .dark-mode #details .button:hover,
@@ -1089,9 +1042,9 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
 .dark-mode .tech-tag { background: #333; }
 .dark-mode .breakdown-title { color: #73aa2d; }
 .dark-mode .about-container { background: #121212; box-shadow: none; }
-.dark-mode .about-name { color: #e0e0e0; }
-.dark-mode .about-title { color: #73aa2d; }
-.dark-mode .about-description p { color: #bbb; }
+.dark-mode .about-text h2 { color: #e0e0e0; }
+.dark-mode .about-text h3 { color: #73aa2d; }
+.dark-mode .about-text p { color: #bbb; }
 .dark-mode .about-text a { color: #73aa2d; }
 .dark-mode .about-text a:hover { color: #5a8b24; }
 .dark-mode .theme-label { color: #e0e0e0; }
