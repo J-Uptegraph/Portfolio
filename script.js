@@ -157,21 +157,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const liveButton = document.getElementById("live");
     const githubIcon = document.getElementById("github");
-    liveButton.onclick = () => window.open(selectedProject.link, "_blank");
+    liveButton.href = selectedProject.link || "#";
+    liveButton.onclick = (e) => {
+      if (selectedProject.link) window.open(selectedProject.link, "_blank");
+      else e.preventDefault();
+    };
 
     githubIcon.classList.add("hidden");
+    githubIcon.href = "#";
     if (selectedProject.github) {
       githubIcon.classList.remove("hidden");
       githubIcon.className = "fab fa-github";
-      githubIcon.onclick = () => window.open(selectedProject.github, "_blank");
+      githubIcon.href = selectedProject.github;
     } else if (selectedProject.link && selectedProject.link.includes("github.com")) {
       githubIcon.classList.remove("hidden");
       githubIcon.className = "fab fa-github";
-      githubIcon.onclick = () => window.open(selectedProject.link, "_blank");
-    } else if (selectedProject.link) {
-      githubIcon.classList.remove("hidden");
-      githubIcon.className = "fas fa-link";
-      githubIcon.onclick = () => window.open(selectedProject.link, "_blank");
+      githubIcon.href = selectedProject.link;
     }
   }
 
@@ -179,259 +180,114 @@ document.addEventListener("DOMContentLoaded", function () {
     modalContent.classList.remove("active");
     setTimeout(() => {
       modal.style.display = "none";
-      document.querySelector(".navbar").focus();
-    }, 400);
+    }, 500);
   }
 
-  if (closeButton) {
-    closeButton.onclick = closeModal;
-    closeButton.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        closeModal();
-      }
-    });
-  }
-
-  window.onclick = function (event) {
-    if (event.target === modal) {
-      closeModal();
-    }
-  };
-
-  // PORTFOLIO ITEM GENERATION
-  function generatePortfolioItems() {
-    const portfolioContainer = document.getElementById("portfolioContainer");
-    portfolioContainer.innerHTML = ''; // Clear any existing content
-
-    Object.keys(modalInfo).forEach((key) => {
-      const project = modalInfo[key];
-      const item = document.createElement("div");
-      item.className = "item";
-      item.id = key;
-      item.innerHTML = `
-        <img src="${project.imgSource}" alt="${project.title}">
-        <div class="text">
-          <h3>${project.title}</h3>
-          <p>${project.info.substring(0, 50)}...</p>
-        </div>
-        <div class="button">
-          Learn More
-        </div>
-      `;
-      portfolioContainer.appendChild(item);
-    });
-  }
-
-  generatePortfolioItems();
-
-  // PORTFOLIO AND FEATURED ITEM INTERACTIONS
-  const portfolioItems = document.querySelectorAll("#portfolio .item");
-  let hoverTimeout;
-
-  function handleHover(element, action, delay) {
-    clearTimeout(hoverTimeout);
-    hoverTimeout = setTimeout(() => {
-      action(element);
-    }, delay);
-  }
-
-  portfolioItems.forEach(item => {
-    item.addEventListener("click", () => openModal(item));
-    if (!mobileWidth.matches) {
-      item.addEventListener("mouseenter", () => {
-        handleHover(item, openModal, 2000);
-      });
-      item.addEventListener("mouseleave", () => {
-        clearTimeout(hoverTimeout);
-      });
-    }
+  closeButton.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
   });
 
-  // Featured Section
+  // PORTFOLIO GENERATION
+  const portfolioContainer = document.getElementById("portfolioContainer");
+  Object.keys(modalInfo).forEach((key, index) => {
+    const project = modalInfo[key];
+    const portfolioItem = document.createElement("div");
+    portfolioItem.className = "item";
+    portfolioItem.id = key;
+    portfolioItem.innerHTML = `
+      <img src="${project.imgSource}" alt="${project.title}" loading="lazy">
+      <div class="text">
+        <h5>${project.title}</h5>
+        <p>${project.info}</p>
+      </div>
+      <a class="button">Learn More</a>
+    `;
+    // Make the entire card clickable
+    portfolioItem.addEventListener("click", () => openModal(portfolioItem));
+    portfolioContainer.appendChild(portfolioItem);
+  });
+
+  // FEATURED PROJECTS PANEL HANDLING
   const panels = document.querySelectorAll(".panel");
-  const backButton = document.querySelector(".back-btn");
-  let currentExpanded = null;
-  let touchStartY = 0;
-  let isSwiping = false;
+  const backBtn = document.querySelector(".back-btn");
 
-  function preloadImages() {
-    const images = [
-      "./media/img/electric_vehicle_robotics.webp",
-      "./media/img/medical_device_welding.webp",
-      "./media/img/defense_material_handling.webp"
-    ];
-    images.forEach(src => {
-      const img = new Image();
-      img.src = src;
+  function togglePanel(e) {
+    const panel = e.currentTarget;
+    const isExpanded = panel.classList.contains("expanded");
+
+    panels.forEach(p => {
+      p.classList.remove("expanded");
+      p.style.display = "flex";
     });
+
+    if (!isExpanded) {
+      panel.classList.add("expanded");
+      backBtn.classList.add("visible");
+    } else {
+      backBtn.classList.remove("visible");
+    }
   }
 
-  function lockScroll() {
-    document.body.classList.add("locked");
-    document.documentElement.style.height = "100%";
-  }
+  panels.forEach(panel => {
+    panel.addEventListener("click", togglePanel);
+  });
 
-  function unlockScroll() {
-    document.body.classList.remove("locked");
-    document.documentElement.style.height = "auto";
-  }
+  backBtn.addEventListener("click", () => {
+    panels.forEach(p => {
+      p.classList.remove("expanded");
+      p.style.display = "flex";
+    });
+    backBtn.classList.remove("visible");
+  });
 
-  function setupEventListeners() {
-    panels.forEach(panel => {
-      if (mobileWidth.matches) {
-        panel.addEventListener("click", (e) => {
-          if (!isSwiping) expandPanel(panel);
+  // CLOSE PANELS ON SECTION CHANGE
+  const sections = document.querySelectorAll("section");
+  const observerOptions = { threshold: 0.3 };
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.target.id !== "featuredSection") {
+        panels.forEach(p => {
+          p.classList.remove("expanded");
+          p.style.display = "flex";
         });
+        backBtn.classList.remove("visible");
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+
+  // HANDLE ESCAPE KEY FOR MODALS AND PANELS
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      if (modal.style.display === "flex") {
+        closeModal();
       } else {
-        panel.addEventListener("click", () => {
-          expandPanel(panel);
+        panels.forEach(p => {
+          p.classList.remove("expanded");
+          p.style.display = "flex";
         });
-        panel.addEventListener("mouseenter", () => {
-          handleHover(panel, expandPanel, 2000);
-        });
-  panel.addEventListener("mouseleave", () => {
-          clearTimeout(hoverTimeout);
-        });
+        backBtn.classList.remove("visible");
       }
-
-      panel.addEventListener("touchstart", handleTouchStart, { passive: false });
-      panel.addEventListener("touchmove", handleTouchMove, { passive: false });
-      panel.addEventListener("touchend", handleTouchEnd, { passive: false });
-
-      panel.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          expandPanel(panel);
-        }
-      });
-
-      const closeBtn = panel.querySelector(".close-btn");
-      if (closeBtn) {
-        closeBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          collapseAll();
-        });
-        closeBtn.addEventListener("touchend", (e) => {
-          e.stopPropagation();
-          collapseAll();
-        });
-      }
-    });
-
-    backButton.addEventListener("click", (e) => {
-      e.stopPropagation();
-      collapseAll();
-    });
-    backButton.addEventListener("touchend", (e) => {
-      e.stopPropagation();
-      collapseAll();
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && currentExpanded) {
-        collapseAll();
-      }
-    });
-  }
-
-  function handleTouchStart(e) {
-    touchStartY = e.touches[0].clientY;
-    isSwiping = false;
-  }
-
-  function handleTouchMove(e) {
-    const touchEndY = e.touches[0].clientY;
-    const diff = touchStartY - touchEndY;
-    if (Math.abs(diff) > 10) {
-      isSwiping = true;
-    }
-  }
-
-  function handleTouchEnd(e) {
-    if (isSwiping) {
-      e.preventDefault();
-    }
-    isSwiping = false;
-  }
-
-  function expandPanel(panel) {
-    if (currentExpanded === panel) return;
-    if (currentExpanded) collapseAll();
-
-    panel.classList.add("expanded");
-    currentExpanded = panel;
-
-    if (mobileWidth.matches) {
-      backButton.classList.add("visible");
-      lockScroll();
-    }
-
-    panel.setAttribute("aria-expanded", "true");
-    const infoPanel = panel.querySelector(".info-panel");
-    if (infoPanel) {
-      infoPanel.setAttribute("aria-hidden", "false");
-      infoPanel.querySelector(".close-btn").focus();
-    }
-  }
-
-  function collapseAll() {
-    if (!currentExpanded) return;
-
-    currentExpanded.classList.remove("expanded");
-    currentExpanded.setAttribute("aria-expanded", "false");
-
-    const infoPanel = currentExpanded.querySelector(".info-panel");
-    if (infoPanel) {
-      infoPanel.setAttribute("aria-hidden", "true");
-    }
-
-    currentExpanded = null;
-    backButton.classList.remove("visible");
-    unlockScroll();
-
-    panels.forEach(panel => {
-      panel.focus();
-    });
-  }
-
-  preloadImages();
-  setupEventListeners();
-
-  window.addEventListener("resize", () => {
-    if (currentExpanded && !mobileWidth.matches) {
-      collapseAll();
     }
   });
-});
 
+  // HANDLE WINDOW RESIZE FOR PANELS
+  window.addEventListener("resize", () => {
+    panels.forEach(p => {
+      if (p.classList.contains("expanded")) {
+        p.classList.remove("expanded");
+        p.style.display = "flex";
+        backBtn.classList.remove("visible");
+      }
+    });
+  });
 
-// Accessibility for hamburger menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const overlay = document.createElement('div');
-overlay.className = 'menu-overlay';
-document.body.appendChild(overlay);
-
-hamburger.addEventListener('click', () => {
-  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-  hamburger.setAttribute('aria-expanded', !expanded);
-  document.body.classList.toggle('menu-open');
-  navMenu.classList.toggle('active');
-});
-
-// Close on ESC key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
-    document.body.classList.remove('menu-open');
-    navMenu.classList.remove('active');
-    hamburger.setAttribute('aria-expanded', false);
-  }
-});
-
-// Close on overlay click
-overlay.addEventListener('click', () => {
-  document.body.classList.remove('menu-open');
-  navMenu.classList.remove('active');
-  hamburger.setAttribute('aria-expanded', false);
+  // ENSURE PANELS ARE VISIBLE ON INITIAL LOAD
+  panels.forEach(p => {
+    p.style.display = "flex";
+  });
 });
