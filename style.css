@@ -1030,7 +1030,10 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
 .dark-mode .tech-tag { background: #333; }
 .dark-mode .breakdown-title { color: #73aa2d; }
 .dark-mode .about-container { 
-  background: #121212; 
+  background: #333; 
+  border-color: #73aa2d;
+  border-width: 2px;
+  border-style: solid;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 .dark-mode .about-text h2 { color: #e0e0e0; }
