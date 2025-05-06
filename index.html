@@ -278,40 +278,29 @@
           </div>
       </div>
   </section>
-  <!-- Portfolio Section -->
-  <br id="portfolioSection"/>
-  <section id="portfolio">
-   <h1 class="text-center">
-    Portfolio
-   </h1>
-   <div class="container" id="portfolioContainer">
-    <!-- Portfolio items will be dynamically inserted here -->
-   </div>
-   <div class="modal" id="preview">
-    <div class="modal-content">
-     <div class="modal-close" id="closeButton" style="width: 40px; height: 40px;">
-      <i class="fas fa-arrow-left">
-      </i>
+   <!-- Portfolio Section -->
+   <br id="portfolioSection">
+   <section id="portfolio">
+     <h1 class="text-center">Portfolio</h1>
+     <div class="container" id="portfolioContainer">
+       <!-- Portfolio items will be dynamically inserted here -->
      </div>
-     <img alt="Project Image" height="auto" id="modalImg" loading="lazy" src="" width="100%"/>
-     <div id="details">
-      <h5 id="title">
-      </h5>
-      <p id="info">
-      </p>
-      <div id="skills" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
-      </div>
-      <div class="details-buttons" style="flex-direction: column; align-items: center; gap: 1rem;">
-       <a class="button" id="live" href="#" style="width: 200px; height: 40px; line-height: 40px; text-align: center;">
-        View Project
-       </a>
-       <a id="github" href="#" style="width: 40px; height: 40px; line-height: 40px; text-align: center;">
-       </a>
-      </div>
+     <div id="preview" class="modal">
+       <div class="modal-content">
+         <div class="modal-close" id="closeButton"><i class="fas fa-arrow-left"></i></div>
+         <img id="modalImg" src="" alt="Project Image">
+         <div id="details">
+           <h5 id="title"></h5>
+           <p id="info"></p>
+           <p id="skills"></p>
+           <div class="details-buttons">
+             <div class="button" id="live">View Project</div>
+             <i id="github"></i>
+           </div>
+         </div>
+       </div>
      </div>
-    </div>
-   </div>
-  </section>
+   </section>
   <!-- Skills Section -->
   <br id="skillsSection"/>
   <section id="mySkills">
