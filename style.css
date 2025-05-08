@@ -418,10 +418,7 @@ html { scroll-padding-top: 80px; }
   padding: 1.2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 1rem;
-}
-.info-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor:default;
 }
 .item-title {
   font-size: 1.1rem;
@@ -505,7 +502,7 @@ body:not(.dark-mode) .tech-tag {
     transform: translateY(100%);
     padding: 2rem;
   }
-  .panel.expanded .info-panel { transform: translateY(0); }
+  .panel.expanded .info-panel { transform: translateY(0); cursor: default; }
   .modal-header .project-title { font-size: 1.3rem; }
   .project-date { font-size: 0.85rem; }
   .item-title { font-size: 1rem; }
@@ -643,6 +640,7 @@ body:not(.dark-mode) .tech-tag {
 .modal-content.active {
   opacity: 1;
   transform: translateY(0) scale(1);
+  width: 90%;
 }
 #modalImg {
   width: 100%;
@@ -1028,6 +1026,7 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
 .dark-mode .tech-tag { background: #333; }
 .dark-mode .breakdown-title { color: #73aa2d; }
 .dark-mode .about-container { 
+  width: 90%;
   background: #333; 
   border-color: #73aa2d;
   border-width: 2px;
