@@ -224,7 +224,6 @@ html { scroll-padding-top: 80px; }
   background: #f8f8f8;
   position: sticky;
   top: 0;
-  z-index: 10;
 }
 .featured-title {
   font-size: 2.5rem;
@@ -363,9 +362,9 @@ html { scroll-padding-top: 80px; }
 .modal-header {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 1rem;
-  padding: 0;
+  padding-left: 0rem;
 }
 .modal-header .close-btn,
 .back-btn {
@@ -490,7 +489,6 @@ body:not(.dark-mode) .tech-tag {
 }
 
 @media (max-width: 768px) {
-  .featured-header { padding: 1rem; }
   .featured-title { font-size: 2rem; }
   #featuredSection { min-height: auto; }
   #featured { min-height: auto; }
@@ -501,19 +499,19 @@ body:not(.dark-mode) .tech-tag {
   .panel-header { width: 90%; }
   .info-panel {
     width: 100%;
-    height: 55%;
+    height: 90%;
     bottom: 0;
     top: auto;
     transform: translateY(100%);
     padding: 2rem;
   }
   .panel.expanded .info-panel { transform: translateY(0); }
-  .modal-header .project-title { font-size: 1.5rem; }
+  .modal-header .project-title { font-size: 1.3rem; }
   .project-date { font-size: 0.85rem; }
   .item-title { font-size: 1rem; }
   .item-text { font-size: 0.9rem; }
-  .breakdown-title { font-size: 1rem; }
-  .tech-tag { font-size: 0.8rem; padding: 0.3rem 0.8rem; }
+  .breakdown-title { font-size: 1.2rem; }
+  .tech-tag { font-size: 0.6rem; padding: 0.3rem 0.8rem; }
 }
 @media (max-width: 767px) and (orientation: landscape) {
   #featuredSection { min-height: 500px; }
