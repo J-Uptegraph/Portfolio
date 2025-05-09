@@ -23,10 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
     "Multi-Robot Deployments | Advanced Automation Projects"
   ];
 
-  // DARK MODE INIT
-  if (localStorage.getItem("darkMode") === "true") {
+  // DARK MODE INIT - Set dark mode as default
+  if (localStorage.getItem("darkMode") === null) {
     document.body.classList.add("dark-mode");
     themeToggle.checked = true;
+    localStorage.setItem("darkMode", "true");
+  } else if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark-mode");
+    themeToggle.checked = true;
+  } else {
+    document.body.classList.remove("dark-mode");
+    themeToggle.checked = false;
   }
 
   themeToggle.addEventListener("change", () => {
