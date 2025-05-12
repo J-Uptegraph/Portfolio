@@ -981,7 +981,7 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
   background: #1f1e20;
   box-shadow: 4px 0 15px rgba(0,0,0,0.3);
 }
-.dark-mode .modal-header .project-title { color: #e0e0e0; padding-bottom: 1rem; }
+.dark-mode .modal-header .project-title { color: #e0e0e0; }
 .dark-mode .project-date { color: #bbb; }
 .dark-mode .info-item { 
   background: #2a2a2a;
@@ -1050,7 +1050,6 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
 
 /* Button consistency in dark mode */
 .dark-mode .button,
-.dark-mode .close-btn,
 .dark-mode .back-btn,
 .dark-mode .footer-btn,
 .dark-mode .modal-close {
@@ -1061,6 +1060,15 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
   min-width: 40px;
   min-height: 40px;
   margin-bottom: 12px;
+}
+
+.dark-mode .close-btn{
+  background-color: #73aa2d;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+  min-width: 40px;
+  min-height: 40px;
 }
 .dark-mode .button:hover,
 .dark-mode .close-btn:hover,
