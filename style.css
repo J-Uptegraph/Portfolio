@@ -336,7 +336,7 @@ html { scroll-padding-top: 80px; }
   transition: background 0.3s ease, transform 0.3s ease;
 }
 .panel:hover .panel-title {
-  background: rgba(0, 0, 0, 0.85);
+  background:#73aa2d;
   transform: scale(1.02);
 }
 .info-panel {
@@ -975,7 +975,7 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
 .dark-mode .panel-date { color: #e0e0e0; opacity: 0.7; }
 .dark-mode .panel-title {
   color: #e0e0e0;
-  background: rgba(0, 0, 0, 0.7);
+  background: #73aa2d;
 }
 .dark-mode .info-panel { 
   background: #1f1e20;
