@@ -16,7 +16,7 @@ const modalInfo = {
     "imgSource": "./media/img/SD_Prototype.webp"
   },
   "3": {
-    "title": "AI-Powered Art Gallery Robotics Assistant",
+    "title": "Art Gallery Robotics Assistant",
     "info": "Designed an interactive robotics assistant leveraging computer vision and NLP for dynamic visitor engagement in a gallery setting. Integrated sensors and real-time control systems, showcasing capabilities akin to autonomous navigation and human-robot interaction seen in advanced robotics.",
     "link": "https://drive.google.com/file/d/1KtsIulKSTVvhaJbtteTgRsoqqq6NjIen/view?usp=sharing",
     "github": "./media/images/robot.webp",
