@@ -633,7 +633,6 @@ body:not(.dark-mode) .tech-tag {
   max-height: 80vh;
   border-radius: 12px;
   overflow: hidden;
-  padding: 0 0 1rem 0;
   box-shadow: none;
   opacity: 0;
   transform: translateY(20px) scale(0.95);
@@ -751,6 +750,7 @@ body:not(.dark-mode) .skill-tag {
 #details .button:hover {
   background: #73aa2d;
   transform: translateY(-2px);
+  cursor: pointer;
 }
 #details #live {
   flex: 0 0 90%;
