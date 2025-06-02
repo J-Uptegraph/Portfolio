@@ -80,26 +80,37 @@ html { scroll-padding-top: 80px; }
 }
 .about-content {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  min-height: 500px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
+  flex-direction: row; /* Keep side-by-side on large screens */
+  align-items: stretch; /* Stretch items vertically */
+  height: 100%; /* Ensure it can stretch fully */
 }
-.about-image { 
-  width: 35%;
-  max-width: 350px;
-  height: 400px;
-  margin-right: 2rem;
-  border-radius: 10px;
+
+.about-image {
+  flex: 1; /* Allow it to take up available space */
+  max-width: 500px; /* Optional max width constraint */
+  height: auto; /* Remove fixed height */
+  min-height: 100%; /* Ensure it stretches to container height */
   overflow: hidden;
-  flex-shrink: 0;
 }
+
 .about-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100%; /* Fill container height */
+  padding: 2em;
+  border-radius: 10px;
+  object-fit: cover; /* Crop to fit container */
+}
+
+@media (max-width: 991px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-image {
+    margin-right: 0; /* Remove side margin in column layout */
+    margin-bottom: 1.5rem; /* Add spacing below image */
+    max-width: 80%; /* Adjust image size for smaller screens */
+  }
 }
 .about-text { 
   padding-left: 70px;
