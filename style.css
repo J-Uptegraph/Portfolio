@@ -658,7 +658,7 @@ body:not(.dark-mode) .tech-tag {
   top: -5px;
   left: 15px;
   opacity: 0.2;
-  color: #a8ff3a;
+  color: #73aa2d;
 }
 
 .quote-section small {
@@ -672,7 +672,7 @@ body:not(.dark-mode) .tech-tag {
   text-align: right;
   font-style: italic;
   margin-top: 0.5rem;
-  color: #a8ff3a;
+  color: white;
   font-size: 0.8rem;
   font-weight: 500;
 }
@@ -713,7 +713,7 @@ body:not(.dark-mode) .tech-tag {
 }
 
 .cori-section h3 i {
-  color: #a8ff3a;
+  color: #73aa2d;
   font-size: 1rem;
   animation: pulse 3s ease-in-out infinite;
 }
@@ -771,7 +771,7 @@ body:not(.dark-mode) .tech-tag {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #73aa2d, #a8ff3a, #73aa2d);
+  background: linear-gradient(90deg, #73aa2d, #73aa2d, #73aa2d);
   background-size: 200% 100%;
   animation: techGlow 4s linear infinite;
 }
@@ -873,7 +873,7 @@ body:not(.dark-mode) .tech-tag {
   }
   to { 
     box-shadow: 0 0 25px rgba(115, 170, 45, 0.35);
-    border-color: #a8ff3a;
+    border-color: #73aa2d;
   }
 }
 
