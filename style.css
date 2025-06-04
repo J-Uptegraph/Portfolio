@@ -850,7 +850,7 @@ body:not(.dark-mode) .tech-tag {
 .final-tagline {
   grid-column: 1 / -1;
   text-align: center;
-  font-family: 'Roboto', sans-serif, Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif, Arial, Helvetica, sans-serif;
 
   font-size: 1.2rem;
   font-weight: 700;
