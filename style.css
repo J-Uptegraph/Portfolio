@@ -542,6 +542,10 @@ body:not(.dark-mode) .tech-tag {
 }
 
 @media (max-width: 480px) {
+  #coriSection {
+      transform: scale(1.0);
+  }
+
   .cori-actions {
     flex-direction: column;
     align-items: flex-start;
