@@ -509,6 +509,7 @@ body:not(.dark-mode) .tech-tag {
   align-items: center;
   position: relative;
   transition: background-color 0.5s ease;
+  transform: scale(0.8);
 }
 
 /* Subtle animated background particles for sci-fi effect */
