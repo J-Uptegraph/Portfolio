@@ -1288,7 +1288,7 @@ body:not(.dark-mode) .skill-tag {
 #details .github-button.hidden { display: none; }
 
 #contact {
-  padding: 6rem 0;
+  padding: 2rem 0;
   background: #f8f8f8;
   transition: background-color 0.5s ease;
 }
@@ -1549,7 +1549,6 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
 .dark-mode .breakdown-title { color: #73aa2d; }
 .dark-mode .about-container { 
   transform: scale(0.85);
-  width: 90%;
   background: #333; 
   border-color: #73aa2d;
   border-width: 2px;
@@ -1557,7 +1556,7 @@ body:not(.dark-mode) .servicesIcon { color: #73aa2d; }
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 
 }
-.dark-mode .about-text h2 { color: #e0e0e0; }
+.dark-mode .about-text h2 { color: #e0e0e0; font-size: 1.8rem; }
 .dark-mode .about-text h3 { color: #73aa2d; }
 .dark-mode .about-text p { color: #bbb; }
 .dark-mode .about-text a { color: #73aa2d; }

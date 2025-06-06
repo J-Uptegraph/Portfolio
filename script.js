@@ -45,8 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(
     (entries) => {
       const isVisible = entries[0].isIntersecting;
+      const isMobile = window.innerWidth <= 768;
+      
       header.classList.toggle("navbarDark", !isVisible);
-      brand.style.visibility = isVisible ? "hidden" : "visible";
+      
+      // On mobile, always keep brand visible. On desktop, hide when hero is visible
+      if (isMobile) {
+        brand.style.visibility = "visible";
+      } else {
+        brand.style.visibility = isVisible ? "hidden" : "visible";
+      }
+      
       scrollToSection.style.display = isVisible ? "block" : "none";
     },
     { threshold: 0.1 }
@@ -54,44 +63,124 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(homeSection);
 
   function setNavbarBrand() {
-    brand.style.display = mobileWidth.matches ? "block" : "none";
+    const isMobile = mobileWidth.matches;
+    
+    if (isMobile) {
+      // On mobile, always show and make visible
+      brand.style.display = "block";
+      brand.style.visibility = "visible";
+    } else {
+      // On desktop, hide by default (intersection observer will control visibility)
+      brand.style.display = "none";
+    }
   }
   setNavbarBrand();
   window.addEventListener("resize", setNavbarBrand);
 
-  // NAVIGATION SCROLL
+  // Helper function for smooth scrolling with custom mobile offsets
+  function scrollToTarget(targetElement, targetId = null) {
+    const navbarHeight = header.offsetHeight;
+    const isMobile = window.innerWidth <= 768;
+    
+    // Custom mobile offsets for different sections
+    let mobileOffset = 0;
+    if (isMobile) {
+      switch(targetId) {
+        case 'aboutSection':
+          mobileOffset = 10; // Custom offset for About section
+          break;
+        case 'contactSection':
+          mobileOffset = 100; // Custom offset for Contact section
+          break;
+
+        case 'featuredSection':
+        case 'coriSection':
+        case 'portfolioSection':
+        case 'skillsSection':
+        default:
+          mobileOffset = 10; // Default offset for other sections
+          break;
+      }
+    }
+    
+    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight + mobileOffset;
+    
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth"
+    });
+  }
+
+  // Helper function to reset panels to default state
+  function resetPanels() {
+    const panels = document.querySelectorAll(".panel");
+    const backBtn = document.querySelector(".back-btn");
+    
+    panels.forEach(p => {
+      p.classList.remove("expanded");
+      p.style.display = "flex";
+      p.style.position = "";
+      p.style.top = "";
+      p.style.left = "";
+      p.style.width = "";
+      p.style.height = "";
+      p.style.zIndex = "";
+    });
+    
+    document.body.style.overflow = "";
+    
+    if (backBtn) {
+      backBtn.classList.remove("visible");
+    }
+  }
+
+  // NAVIGATION SCROLL - IMPROVED MOBILE VERSION
   navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const targetId = link.querySelector("a").getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
+      
       if (targetElement) {
-        const navbarHeight = header.offsetHeight;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth"
-        });
-      }
-      const menu = document.querySelector(".navbar-collapse");
-      if (menu.classList.contains("show")) {
-        new bootstrap.Collapse(menu).toggle();
+        // Close mobile menu first (if open)
+        const menu = document.querySelector(".navbar-collapse");
+        if (menu && menu.classList.contains("show")) {
+          // Use Bootstrap's collapse method to properly close
+          const bsCollapse = new bootstrap.Collapse(menu, {
+            toggle: false
+          });
+          bsCollapse.hide();
+          
+          // Wait for menu to close before scrolling
+          setTimeout(() => {
+            scrollToTarget(targetElement, targetId);
+            
+            // If navigating to featured section, ensure panels are reset
+            if (targetId === "featuredSection") {
+              resetPanels();
+            }
+          }, 300); // Match Bootstrap's collapse transition time
+        } else {
+          // Desktop or menu already closed
+          scrollToTarget(targetElement, targetId);
+          
+          // If navigating to featured section, ensure panels are reset
+          if (targetId === "featuredSection") {
+            resetPanels();
+          }
+        }
       }
     });
   });
 
-  // SCROLL-TO-SECTION (HERO ARROW) SCROLL
+  // SCROLL-TO-SECTION (HERO ARROW) SCROLL - Updated with mobile offset
   scrollToSection.addEventListener("click", (e) => {
     e.preventDefault();
     const targetId = scrollToSection.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
+    
     if (targetElement) {
-      const navbarHeight = header.offsetHeight;
-      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth"
-      });
+      scrollToTarget(targetElement, targetId);
     }
   });
 
@@ -170,16 +259,18 @@ document.addEventListener("DOMContentLoaded", function () {
       else e.preventDefault();
     };
 
-    githubIcon.classList.add("hidden");
-    githubIcon.href = "#";
-    if (selectedProject.github) {
-      githubIcon.classList.remove("hidden");
-      githubIcon.className = "fab fa-github";
-      githubIcon.href = selectedProject.github;
-    } else if (selectedProject.link && selectedProject.link.includes("github.com")) {
-      githubIcon.classList.remove("hidden");
-      githubIcon.className = "fab fa-github";
-      githubIcon.href = selectedProject.link;
+    if (githubIcon) {
+      githubIcon.classList.add("hidden");
+      githubIcon.href = "#";
+      if (selectedProject.github) {
+        githubIcon.classList.remove("hidden");
+        githubIcon.className = "fab fa-github";
+        githubIcon.href = selectedProject.github;
+      } else if (selectedProject.link && selectedProject.link.includes("github.com")) {
+        githubIcon.classList.remove("hidden");
+        githubIcon.className = "fab fa-github";
+        githubIcon.href = selectedProject.link;
+      }
     }
   }
 
@@ -190,49 +281,95 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
   }
 
-  closeButton.addEventListener("click", closeModal);
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
-  });
+  if (closeButton) {
+    closeButton.addEventListener("click", closeModal);
+  }
+  
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
 
-  // PORTFOLIO GENERATION
+  // PORTFOLIO GENERATION - Added safety checks
   const portfolioContainer = document.getElementById("portfolioContainer");
-  Object.keys(modalInfo).forEach((key, index) => {
-    const project = modalInfo[key];
-    const portfolioItem = document.createElement("div");
-    portfolioItem.className = "item";
-    portfolioItem.id = key;
-    portfolioItem.innerHTML = `
-      <img src="${project.imgSource}" alt="${project.title}" loading="lazy">
-      <div class="text">
-        <h5>${project.title}</h5>
-        <p>${project.info}</p>
-      </div>
-      <a class="button">Learn More</a>
-    `;
-    // Make the entire card clickable
-    portfolioItem.addEventListener("click", () => openModal(portfolioItem));
-    portfolioContainer.appendChild(portfolioItem);
-  });
+  if (portfolioContainer && typeof modalInfo !== 'undefined') {
+    Object.keys(modalInfo).forEach((key, index) => {
+      const project = modalInfo[key];
+      const portfolioItem = document.createElement("div");
+      portfolioItem.className = "item";
+      portfolioItem.id = key;
+      portfolioItem.innerHTML = `
+        <img src="${project.imgSource}" alt="${project.title}" loading="lazy">
+        <div class="text">
+          <h5>${project.title}</h5>
+          <p>${project.info}</p>
+        </div>
+        <a class="button">Learn More</a>
+      `;
+      // Make the entire card clickable
+      portfolioItem.addEventListener("click", () => openModal(portfolioItem));
+      portfolioContainer.appendChild(portfolioItem);
+    });
+  }
 
-  // FEATURED PROJECTS PANEL HANDLING
+  // FEATURED PROJECTS PANEL HANDLING - IMPROVED MOBILE VERSION
   const panels = document.querySelectorAll(".panel");
   const backBtn = document.querySelector(".back-btn");
 
   function togglePanel(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
     const panel = e.currentTarget;
     const isExpanded = panel.classList.contains("expanded");
 
+    // Always reset all panels first
     panels.forEach(p => {
       p.classList.remove("expanded");
       p.style.display = "flex";
+      p.style.position = "";
+      p.style.top = "";
+      p.style.left = "";
+      p.style.width = "";
+      p.style.height = "";
+      p.style.zIndex = "";
     });
+
+    // Reset body overflow
+    document.body.style.overflow = "";
 
     if (!isExpanded) {
       panel.classList.add("expanded");
-      backBtn.classList.add("visible");
+      
+      // On mobile screens, force hide other panels and make this one fullscreen
+      if (window.innerWidth <= 768) {
+        // Hide all other panels completely
+        panels.forEach(p => {
+          if (p !== panel) {
+            p.style.display = "none";
+          }
+        });
+        
+        // Force the expanded panel to be fullscreen
+        panel.style.position = "fixed";
+        panel.style.top = "0";
+        panel.style.left = "0";
+        panel.style.width = "100vw";
+        panel.style.height = "100vh";
+        panel.style.zIndex = "9999";
+        
+        // Prevent body scrolling
+        document.body.style.overflow = "hidden";
+      }
+      
+      if (backBtn) {
+        backBtn.classList.add("visible");
+      }
     } else {
-      backBtn.classList.remove("visible");
+      if (backBtn) {
+        backBtn.classList.remove("visible");
+      }
     }
   }
 
@@ -240,13 +377,13 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.addEventListener("click", togglePanel);
   });
 
-  backBtn.addEventListener("click", () => {
-    panels.forEach(p => {
-      p.classList.remove("expanded");
-      p.style.display = "flex";
+  if (backBtn) {
+    backBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      resetPanels();
     });
-    backBtn.classList.remove("visible");
-  });
+  }
 
   // CLOSE PANELS ON SECTION CHANGE
   const sections = document.querySelectorAll("section");
@@ -254,11 +391,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.target.id !== "featuredSection") {
-        panels.forEach(p => {
-          p.classList.remove("expanded");
-          p.style.display = "flex";
-        });
-        backBtn.classList.remove("visible");
+        resetPanels();
       }
     });
   }, observerOptions);
@@ -270,27 +403,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // HANDLE ESCAPE KEY FOR MODALS AND PANELS
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      if (modal.style.display === "flex") {
+      if (modal && modal.style.display === "flex") {
         closeModal();
       } else {
-        panels.forEach(p => {
-          p.classList.remove("expanded");
-          p.style.display = "flex";
-        });
-        backBtn.classList.remove("visible");
+        resetPanels();
       }
     }
   });
 
   // HANDLE WINDOW RESIZE FOR PANELS
   window.addEventListener("resize", () => {
-    panels.forEach(p => {
-      if (p.classList.contains("expanded")) {
-        p.classList.remove("expanded");
-        p.style.display = "flex";
-        backBtn.classList.remove("visible");
-      }
-    });
+    // Reset panels on resize to avoid layout issues
+    resetPanels();
+    // Reapply brand visibility logic
+    setNavbarBrand();
   });
 
   // ENSURE PANELS ARE VISIBLE ON INITIAL LOAD
