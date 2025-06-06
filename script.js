@@ -87,10 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isMobile) {
       switch(targetId) {
         case 'aboutSection':
-          mobileOffset = 10; // Custom offset for About section
+          mobileOffset = 150; // Custom offset for About section
           break;
         case 'contactSection':
-          mobileOffset = 100; // Custom offset for Contact section
+          mobileOffset = 150; // Custom offset for Contact section
           break;
 
         case 'featuredSection':
@@ -173,14 +173,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // SCROLL-TO-SECTION (HERO ARROW) SCROLL - Updated with mobile offset
+  // SCROLL-TO-SECTION (HERO ARROW) SCROLL - Updated to go to featuredSection like Automation nav
   scrollToSection.addEventListener("click", (e) => {
     e.preventDefault();
-    const targetId = scrollToSection.getAttribute("href").substring(1);
+    // Always go to featuredSection (Automation section) regardless of href attribute
+    const targetId = "featuredSection";
     const targetElement = document.getElementById(targetId);
     
     if (targetElement) {
       scrollToTarget(targetElement, targetId);
+      // Reset panels when navigating via chevron
+      resetPanels();
     }
   });
 
