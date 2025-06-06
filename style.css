@@ -76,9 +76,8 @@ html { scroll-padding-top: 80px; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100%;
-  transform: scale(0.80);
 }
+
 .about-content {
   color: black;
   display: flex;
