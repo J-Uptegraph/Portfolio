@@ -34,7 +34,7 @@ const modalInfo = {
   "5": {
     "title": "OctoPrint Mobile App",
     "info": "Built a Swift-based mobile app for remote 3D printer control via the OctoPrint API, featuring real-time monitoring and responsive UI. Highlighted precision control and system integration, applicable to teleoperation in robotics.",
-    "link": "https://drive.google.com/file/d/1dIeoOIwAxI322oDJgfRVGOVz58Jdgvl7/view?usp=sharing",
+    "link": "https://github.com/J-Uptegraph/OctoPrint-Mobile-App/blob/main/README.md",
     "github": "https://github.com/J-Uptegraph/OctoPrint-Mobile-App",
     "skills": ["API Integration", "Mobile Development", "Swift", "UI/UX Design"],
     "imgSource": "./media/img/Octoprint2.webp"
@@ -58,7 +58,7 @@ const modalInfo = {
   "8": {
     "title": "Jedi VR Simulator (Unity)",
     "info": "Created a Unity-based VR Jedi training simulator with C#, implementing physics-driven interactions and gesture controls for immersive gameplay. Demonstrated skills in simulation and control systems relevant to robotics prototyping.",
-    "link": "https://drive.google.com/file/d/1AclL6aA5GCGBlHX2rHDGHoap25FKz2v_/view?usp=sharing",
+    "link": "../media/videos/Lightsaber Demo.mp4",
     "github": "https://drive.google.com/file/d/1AclL6aA5GCGBlHX2rHDGHoap25FKz2v_/view?usp=sharing",
     "skills": ["3D Modeling", "C#", "Game Design", "Game Development", "Unity"],
     "imgSource": "./media/img/jediTrainingUnity.webp"
