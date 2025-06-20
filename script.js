@@ -545,20 +545,39 @@ function displayLatestUpdate(update) {
     const preview = lines.slice(0, 10).join('\n');
     
     container.innerHTML = `
-        <div class="update-content">
-            <div class="update-meta">
-                <span class="version-badge">v${update.version}</span>
-                <span class="update-date">Update</span>
+        <div class="update-content" style="display: flex; flex-direction: row; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 200px;">
+                <div class="update-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span class="version-badge">v${update.version}</span>
+                    <span style="color: #73aa2d; font-size: 1rem; font-weight: bold;">Update</span>
+                </div>
+                <div class="update-preview">
+                    ${parseMarkdown(preview)}
+                </div>
             </div>
-            <div class="update-preview">
-                ${parseMarkdown(preview)}
-            </div>
-            <div style="margin-top: 1rem;">
-                <a href="${update.url}" target="_blank" class="cori-btn" style="display: inline-flex;">
-                    <i class="fab fa-github"></i> View Full Update
-                </a>
-            </div>
+            <a href="${update.url}" target="_blank" class="cori-btn" style="text-align: center; padding: 0.5rem 1rem; white-space: nowrap; text-decoration: none; background-color: #73aa2d; color: #fff; border-radius: 5px;">
+                <i class="fab fa-github"></i> Read Update
+            </a>
         </div>
+        <style>
+            @media (max-width: 600px) {
+                .update-content {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .cori-btn {
+                    width: 100%;
+                    box-sizing: border-box;
+                    margin-top: 0.5rem;
+                }
+            }
+            @media (min-width: 601px) {
+                .cori-btn {
+                    width: auto;
+                    align-self: center;
+                }
+            }
+        </style>
     `;
 }
 
@@ -589,27 +608,46 @@ function displayUpdateHistory(updates) {
         );
         
         const firstSentences = contentLines.slice(0, 10).join(' ').trim();
-        const preview = firstSentences.length > 80 ? firstSentences.substring(0, 250) + '...' : firstSentences;
+        const preview = firstSentences.length > 120 ? firstSentences.substring(0, 120) + '...' : firstSentences;
         
         return `
             <div style="margin-bottom: 1rem;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                     <span class="version-badge">v${update.version}</span>
-                    <span style="color: #888; font-size: 0.85rem;">${updateDate}</span>
+                    <span style="color: #73aa2d; font-size: 1rem; font-weight: bold;">${updateDate}</span>
                 </div>
-                <div style="display: flex; align-items: center; gap: 1rem;">
-                    <div style="flex: 1;">
-                        <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">
+                <div class="update-content" style="display: flex; flex-direction: row; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem;">
                             📢 CORI Update — v${update.version}
                         </h4>
-                        <p style="margin: 0; color: #ccc; font-size: 0.85rem; line-height: 1.3;">
+                        <p style="margin: 0 0 0.5rem 0; color: #ccc; font-size: 0.85rem; line-height: 1.4;">
                             ${preview}
                         </p>
                     </div>
-                    <a href="${update.url}" target="_blank" class="cori-btn" style="flex-shrink: 0; width: 100%;">
+                    <a href="${update.url}" target="_blank" class="cori-btn" style="text-align: center; padding: 0.5rem 1rem; white-space: nowrap; text-decoration: none; background-color: #73aa2d; color: #fff; border-radius: 5px;">
                         <i class="fab fa-github"></i> View Full Update
                     </a>
                 </div>
+                <style>
+                    @media (max-width: 600px) {
+                        .update-content {
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        .cori-btn {
+                            width: 100%;
+                            box-sizing: border-box;
+                            margin-top: 0.5rem;
+                        }
+                    }
+                    @media (min-width: 601px) {
+                        .cori-btn {
+                            width: auto;
+                            align-self: center;
+                        }
+                    }
+                </style>
             </div>
         `;
     }).join('');
