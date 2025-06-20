@@ -1842,3 +1842,122 @@ a.button {
 .dark-mode .update-meta {
     border-bottom: 1px solid #444;
 }
+
+/* Update History Dropdown Styles */
+.update-history-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #73aa2d;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.update-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.update-history-header:hover {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+
+.update-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.update-preview {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.update-content-full {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 1rem;
+}
+
+.update-content-full.expanded {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.update-content-full::-webkit-scrollbar {
+    width: 4px;
+}
+
+.update-content-full::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+.update-content-full::-webkit-scrollbar-thumb {
+    background: #73aa2d;
+    border-radius: 2px;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+    color: #73aa2d;
+}
+
+.dropdown-arrow.expanded {
+    transform: rotate(180deg);
+}
+
+.update-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.github-btn {
+    background: linear-gradient(135deg, #333, #1a1a1a);
+    min-width: 120px;
+}
+
+.github-btn:hover {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #73aa2d;
+    padding: 2rem;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #73aa2d;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-message {
+    color: #ff6b6b;
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+}
