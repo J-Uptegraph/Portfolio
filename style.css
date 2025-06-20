@@ -567,6 +567,7 @@ body:not(.dark-mode) .tech-tag {
 .cori-btn {
   background: linear-gradient(135deg, #73aa2d, #5a8b24);
   color: white;
+  width: 100%;
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 15px;
@@ -1960,4 +1961,214 @@ a.button {
     text-align: center;
     padding: 2rem;
     font-style: italic;
+}
+
+/* Enhanced update display styles */
+.update-display-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.update-preview {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.update-preview.collapsed {
+    opacity: 0;
+    transform: translateY(-20px);
+    height: 0;
+    overflow: hidden;
+}
+
+.update-full-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.update-full-content.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 1rem;
+}
+
+.content-fade {
+    position: relative;
+    margin-top: -2rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fade-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9), white);
+    pointer-events: none;
+}
+
+.more-content-hint {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #73aa2d;
+    font-size: 0.9rem;
+    font-style: italic;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(115, 170, 45, 0.2);
+}
+
+.expand-icon {
+    transition: transform 0.3s ease;
+}
+
+.expand-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.expand-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.expand-btn:hover .expand-icon {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-3px) rotate(0deg); }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark mode support */
+.dark-mode .fade-gradient {
+    background: linear-gradient(to bottom, transparent, rgba(30,30,30,0.9), #1e1e1e);
+}
+
+.dark-mode .more-content-hint {
+    background: #1e1e1e;
+    color: #73aa2d;
+}
+/* Enhanced update display styles */
+.update-display-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.update-preview {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.update-preview.collapsed {
+    opacity: 0;
+    transform: translateY(-20px);
+    height: 0;
+    overflow: hidden;
+}
+
+.update-full-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.update-full-content.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 1rem;
+}
+
+.content-fade {
+    position: relative;
+    margin-top: -2rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fade-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9), white);
+    pointer-events: none;
+}
+
+.more-content-hint {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #73aa2d;
+    font-size: 0.9rem;
+    font-style: italic;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(115, 170, 45, 0.2);
+}
+
+.expand-icon {
+    transition: transform 0.3s ease;
+}
+
+.expand-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.expand-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.expand-btn:hover .expand-icon {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-3px) rotate(0deg); }
+}
+
+/* Dark mode support */
+.dark-mode .fade-gradient {
+    background: linear-gradient(to bottom, transparent, rgba(30,30,30,0.9), #1e1e1e);
+}
+
+.dark-mode .more-content-hint {
+    background: #1e1e1e;
+    color: #73aa2d;
 }
