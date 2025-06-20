@@ -427,3 +427,285 @@ document.addEventListener("DOMContentLoaded", function () {
     p.style.display = "flex";
   });
 });
+
+// LIVE CORI UPDATES - GitHub Integration
+const GITHUB_CONFIG = {
+    owner: 'J-Uptegraph',
+    repo: 'CORI',
+    updatesPath: 'docs/project_updates',
+    apiBase: 'https://api.github.com'
+};
+
+// Live loading configuration
+let updatesCache = null;
+let lastFetch = 0;
+const CACHE_DURATION = 30 * 1000; // 30 seconds for live loading
+const LIVE_CHECK_INTERVAL = 60 * 1000; // Check every 60 seconds
+let liveCheckTimer = null;
+let isLiveMode = true;
+let nextCheckCountdown = LIVE_CHECK_INTERVAL / 1000;
+let countdownTimer = null;
+
+// Markdown to HTML converter
+function parseMarkdown(markdown) {
+    return markdown
+        .replace(/^### (.*$)/gm, '<h3>$1</h3>')
+        .replace(/^## (.*$)/gm, '<h2>$1</h2>')
+        .replace(/^# (.*$)/gm, '<h1>$1</h1>')
+        .replace(/^\* (.*$)/gm, '<li>$1</li>')
+        .replace(/^- (.*$)/gm, '<li>$1</li>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/`(.*?)`/g, '<code>$1</code>')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/^(?!<[hul])/gm, '<p>')
+        .replace(/(<li>.*?<\/li>)/gs, '<ul>$1</ul>')
+        .replace(/<\/ul>\s*<ul>/g, '')
+        .replace(/<p><\/p>/g, '');
+}
+
+// Extract version from filename
+function extractVersion(filename) {
+    const match = filename.match(/v(\d+\.?\d*(?:\.\d+)?)/i);
+    return match ? match[1] : 'Unknown';
+}
+
+// Update status indicator
+function updateStatus(message) {
+    const statusEl = document.getElementById('updateStatus');
+    if (statusEl) statusEl.textContent = message;
+}
+
+// Fetch updates from GitHub
+async function fetchUpdates() {
+    const now = Date.now();
+    
+    if (updatesCache && (now - lastFetch) < CACHE_DURATION) {
+        return updatesCache;
+    }
+
+    try {
+        const response = await fetch(
+            `${GITHUB_CONFIG.apiBase}/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/contents/${GITHUB_CONFIG.updatesPath}`
+        );
+        
+        if (!response.ok) throw new Error(`GitHub API returned ${response.status}`);
+        
+        const files = await response.json();
+        const updateFiles = files.filter(file => 
+            file.name.endsWith('.md') && file.name.includes('update')
+        );
+
+        updateFiles.sort((a, b) => b.name.localeCompare(a.name));
+
+        const updates = await Promise.all(
+            updateFiles.slice(0, 5).map(async file => {
+                try {
+                    const contentResponse = await fetch(file.download_url);
+                    const content = await contentResponse.text();
+                    
+                    return {
+                        filename: file.name,
+                        version: extractVersion(file.name),
+                        content: content,
+                        lastModified: file.sha,
+                        url: file.html_url
+                    };
+                } catch (error) {
+                    console.warn(`Failed to fetch ${file.name}:`, error);
+                    return null;
+                }
+            })
+        );
+
+        const validUpdates = updates.filter(update => update !== null);
+        updatesCache = validUpdates;
+        lastFetch = now;
+        
+        return validUpdates;
+        
+    } catch (error) {
+        console.error('Error fetching updates:', error);
+        throw error;
+    }
+}
+
+// Display latest update
+function displayLatestUpdate(update) {
+    const container = document.getElementById('latestUpdateContent');
+    if (!container) return;
+    
+    if (!update) {
+        container.innerHTML = '<div class="error-message">No updates available</div>';
+        return;
+    }
+
+    const lines = update.content.split('\n');
+    const preview = lines.slice(0, 10).join('\n');
+    
+    container.innerHTML = `
+        <div class="update-content">
+            <div class="update-meta">
+                <span class="version-badge">v${update.version}</span>
+                <span class="update-date">Latest Update</span>
+            </div>
+            <div class="update-preview">
+                ${parseMarkdown(preview)}
+                ${lines.length > 10 ? '<p><em>...</em></p>' : ''}
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="${update.url}" target="_blank" class="cori-btn" style="display: inline-flex;">
+                    <i class="fab fa-github"></i> View Full Update
+                </a>
+            </div>
+        </div>
+    `;
+}
+
+// Display update history
+function displayUpdateHistory(updates) {
+    const container = document.getElementById('updateHistory');
+    if (!container) return;
+    
+    if (!updates || updates.length === 0) {
+        container.innerHTML = '<div class="error-message">No update history available</div>';
+        return;
+    }
+
+    const historyItems = updates.slice(1, 4).map(update => `
+        <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #73aa2d; margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span class="version-badge">v${update.version}</span>
+                <a href="${update.url}" target="_blank" style="color: #73aa2d; text-decoration: none; font-size: 0.9rem;">
+                    <i class="fas fa-external-link-alt"></i> View
+                </a>
+            </div>
+            <p style="margin: 0; color: #666; font-size: 0.9rem;">
+                ${update.filename.replace('.md', '').replace(/_/g, ' ')}
+            </p>
+        </div>
+    `).join('');
+
+    container.innerHTML = historyItems || '<p>No additional updates found</p>';
+}
+
+// Live checking functions
+function startLiveChecking() {
+    if (liveCheckTimer) return;
+    
+    liveCheckTimer = setInterval(async () => {
+        if (isLiveMode) {
+            await checkForUpdates();
+        }
+    }, LIVE_CHECK_INTERVAL);
+    
+    startCountdown();
+}
+
+function stopLiveChecking() {
+    if (liveCheckTimer) {
+        clearInterval(liveCheckTimer);
+        liveCheckTimer = null;
+    }
+    if (countdownTimer) {
+        clearInterval(countdownTimer);
+        countdownTimer = null;
+    }
+}
+
+function startCountdown() {
+    nextCheckCountdown = LIVE_CHECK_INTERVAL / 1000;
+    updateCountdownDisplay();
+    
+    if (countdownTimer) clearInterval(countdownTimer);
+    countdownTimer = setInterval(() => {
+        nextCheckCountdown--;
+        updateCountdownDisplay();
+        
+        if (nextCheckCountdown <= 0) {
+            nextCheckCountdown = LIVE_CHECK_INTERVAL / 1000;
+        }
+    }, 1000);
+}
+
+function updateCountdownDisplay() {
+    const nextCheckEl = document.getElementById('nextCheck');
+    if (isLiveMode && nextCheckEl) {
+        nextCheckEl.textContent = `Next check in ${nextCheckCountdown}s`;
+    }
+}
+
+function toggleLiveMode() {
+    isLiveMode = !isLiveMode;
+    const toggle = document.getElementById('liveToggle');
+    const nextCheck = document.getElementById('nextCheck');
+    
+    if (isLiveMode) {
+        toggle.classList.add('active');
+        toggle.innerHTML = '<i class="fas fa-broadcast-tower"></i> LIVE';
+        nextCheck.style.opacity = '1';
+        startLiveChecking();
+        updateStatus('Live mode enabled - monitoring for updates');
+    } else {
+        toggle.classList.remove('active');
+        toggle.innerHTML = '<i class="fas fa-pause"></i> PAUSED';
+        nextCheck.style.opacity = '0.5';
+        nextCheck.textContent = 'Live mode paused';
+        stopLiveChecking();
+        updateStatus('Live mode paused');
+    }
+}
+
+async function checkForUpdates() {
+    const liveDot = document.getElementById('liveDot');
+    
+    try {
+        if (liveDot) liveDot.classList.add('checking');
+        updateStatus('Checking for updates...');
+        
+        const updates = await fetchUpdates();
+        
+        if (updates && updates.length > 0) {
+            displayLatestUpdate(updates[0]);
+            displayUpdateHistory(updates);
+            updateStatus(`Up to date (v${updates[0].version})`);
+        } else {
+            updateStatus('No updates found');
+        }
+        
+    } catch (error) {
+        console.error('Live check failed:', error);
+        updateStatus('Check failed - will retry');
+    } finally {
+        if (liveDot) {
+            setTimeout(() => {
+                liveDot.classList.remove('checking');
+            }, 500);
+        }
+    }
+}
+
+async function refreshUpdates() {
+    updatesCache = null;
+    lastFetch = 0;
+    await checkForUpdates();
+    nextCheckCountdown = LIVE_CHECK_INTERVAL / 1000;
+}
+
+// Initialize CORI live updates when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Only initialize if CORI section exists
+    if (document.getElementById('coriSection')) {
+        console.log('🔴 Initializing CORI live updates...');
+        checkForUpdates();
+        if (isLiveMode) {
+            startLiveChecking();
+        }
+    }
+});
+
+// Cleanup
+window.addEventListener('beforeunload', () => {
+    stopLiveChecking();
+});

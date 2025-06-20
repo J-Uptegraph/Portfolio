@@ -1666,3 +1666,179 @@ a.button {
 .menu-open .menu-overlay {
   display: block;
 }
+
+.update-status {
+    background: linear-gradient(135deg, #73aa2d, #5a8b24);
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(115, 170, 45, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    animation: livePulse 2s infinite;
+}
+
+.live-dot.checking {
+    animation: liveChecking 1s linear infinite;
+}
+
+@keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.8); }
+}
+
+@keyframes liveChecking {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(0.6); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.live-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.live-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.live-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.live-toggle.active {
+    background: rgba(255, 255, 255, 0.9);
+    color: #73aa2d;
+}
+
+.next-check {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.latest-update {
+    position: relative;
+}
+
+.latest-update::before {
+    content: 'LATEST';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: #73aa2d;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 0 10px 0 10px;
+    letter-spacing: 1px;
+}
+
+.update-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #73aa2d;
+    margin-top: 1rem;
+}
+
+.update-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.version-badge {
+    background: #73aa2d;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Orbitron', monospace;
+}
+
+.update-date {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.loading-spinner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #73aa2d;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #73aa2d;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.refresh-btn {
+    background: none !important;
+    border: 2px solid #73aa2d !important;
+    color: #73aa2d !important;
+    width: 100%;
+}
+
+.refresh-btn:hover {
+    background: #73aa2d !important;
+    color: white !important;
+}
+
+/* Dark mode compatibility for live updates */
+.dark-mode .update-content {
+    background: rgba(20, 20, 20, 0.8);
+    color: #e0e0e0;
+}
+
+.dark-mode .update-date {
+    color: #bbb;
+}
+
+.dark-mode .update-meta {
+    border-bottom: 1px solid #444;
+}
