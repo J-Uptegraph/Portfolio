@@ -10,7 +10,7 @@ const modalInfo = {
   "2": {
     "title": "Cerebral Palsy Assistive Cup",
     "info": "Developed an assistive drinking device for cerebral palsy patients, focusing on human-centered design and robust electronics integration. Led rapid prototyping and iterative testing to ensure ergonomic functionality, drawing parallels to assistive robotics for mobility.",
-    "link": "https://drive.google.com/file/d/1wOa7wEtdBXZI4i9xNtuNAEUCwSKBbSzh/view?usp=sharing",
+    "link": "https://github.com/J-Uptegraph/SDSmartCup",
     "github": "https://github.com/J-Uptegraph/SDSmartCup",
     "skills": ["Arduino", "Assistive Technology", "Human-Centered Design", "Rapid Prototyping"],
     "imgSource": "./media/img/SD_Prototype.webp"
@@ -42,7 +42,7 @@ const modalInfo = {
   "6": {
     "title": "3D Printing Request System",
     "info": "Developed a web-based system for managing 3D printing requests, automating STL/GCode submission and approval workflows using PHP, SQL, and JavaScript. Streamlined processes mirror automation strategies in robotics manufacturing.",
-    "link": "/demos/PrintManager",
+    "link": "https://github.com/J-Uptegraph/Portfolio/tree/main/demos/PrintManager",
     "github": "https://github.com/J-Uptegraph/Portfolio/tree/main/demos/PrintManager",
     "skills": ["Automation", "JavaScript", "PHP", "SQL", "Web Development"],
     "imgSource": "./media/img/print_request.webp"
