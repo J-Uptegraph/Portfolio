@@ -477,6 +477,22 @@ function updateStatus(message) {
     if (statusEl) statusEl.textContent = message;
 }
 
+// Function to check and enable scrollbar when needed
+function checkScrollbarNeeded(totalUpdatesCount = 0) {
+    const updateHistory = document.getElementById('updateHistory');
+    if (!updateHistory) return;
+    
+    // Use total GitHub updates count, not displayed count
+    // If more than 3 total updates available on GitHub, enable scrollbar
+    if (totalUpdatesCount > 3) {
+        updateHistory.classList.add('scrollable');
+        console.log(`🎯 CORI: Enabled scrollbar - ${totalUpdatesCount} total updates available on GitHub`);
+    } else {
+        updateHistory.classList.remove('scrollable');
+        console.log(`📋 CORI: ${totalUpdatesCount} total updates - no scrollbar needed`);
+    }
+}
+
 // Fetch updates from GitHub
 async function fetchUpdates() {
     const now = Date.now();
@@ -498,6 +514,9 @@ async function fetchUpdates() {
         );
 
         updateFiles.sort((a, b) => b.name.localeCompare(a.name));
+
+        // Store total count globally for scrollbar decision
+        window.totalGitHubUpdates = updateFiles.length;
 
         const updates = await Promise.all(
             updateFiles.slice(0, 5).map(async file => {
@@ -541,6 +560,11 @@ function displayLatestUpdate(update) {
         return;
     }
 
+    // Extract date from content (same logic as displayUpdateHistory)
+    const dateMatch = update.content.match(/(?:Date|Updated|Created):\s*(.+)/i) || 
+                     update.content.match(/(\d{1,2}\/\d{1,2}\/\d{4}|\d{4}-\d{2}-\d{2}|\w+ \d{1,2}, \d{4})/);
+    const updateDate = dateMatch ? dateMatch[1] : 'Recent update';
+
     const lines = update.content.split('\n');
     const preview = lines.slice(0, 10).join('\n');
     
@@ -549,7 +573,7 @@ function displayLatestUpdate(update) {
             <div style="flex: 1; min-width: 200px;">
                 <div class="update-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                     <span class="version-badge">v${update.version}</span>
-                    <span style="color: #73aa2d; font-size: 1rem; font-weight: bold;">Update</span>
+                    <span style="color: #73aa2d; font-size: 1rem; font-weight: bold;">${updateDate}</span>
                 </div>
                 <div class="update-preview">
                     ${parseMarkdown(preview)}
@@ -591,7 +615,9 @@ function displayUpdateHistory(updates) {
         return;
     }
 
-    const historyItems = updates.slice(1, 4).map(update => {
+    // Show updates starting from index 1 (skip the latest which is shown above)
+    // Display ALL remaining updates, not just slice(1, 4)
+    const historyItems = updates.slice(1).map(update => {
         // Extract date from content (look for date patterns)
         const dateMatch = update.content.match(/(?:Date|Updated|Created):\s*(.+)/i) || 
                          update.content.match(/(\d{1,2}\/\d{1,2}\/\d{4}|\d{4}-\d{2}-\d{2}|\w+ \d{1,2}, \d{4})/);
@@ -653,6 +679,9 @@ function displayUpdateHistory(updates) {
     }).join('');
 
     container.innerHTML = historyItems || '<p>No additional updates found</p>';
+    
+    // Check if scrollbar is needed based on total GitHub updates count
+    setTimeout(() => checkScrollbarNeeded(window.totalGitHubUpdates || 0), 100);
 }
 
 // Live checking functions
@@ -734,7 +763,8 @@ async function checkForUpdates() {
         if (updates && updates.length > 0) {
             displayLatestUpdate(updates[0]);
             displayUpdateHistory(updates);
-            updateStatus(`Up to date (v${updates[0].version})`);
+            const totalCount = window.totalGitHubUpdates || updates.length;
+            updateStatus(`Up to date (v${updates[0].version}) - ${totalCount} total updates on GitHub`);
         } else {
             updateStatus('No updates found');
         }
@@ -762,7 +792,7 @@ async function refreshUpdates() {
 document.addEventListener('DOMContentLoaded', function() {
     // Only initialize if CORI section exists
     if (document.getElementById('coriSection')) {
-        console.log('🔴 Initializing CORI live updates...');
+        console.log('Initializing CORI live updates...');
         checkForUpdates();
         if (isLiveMode) {
             startLiveChecking();

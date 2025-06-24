@@ -1941,30 +1941,6 @@ a.button {
     background: linear-gradient(135deg, #1a1a1a, #333);
 }
 
-/* Loading spinner styles */
-.loading-spinner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: #73aa2d;
-    padding: 2rem;
-}
-
-.spinner {
-    width: 20px;
-    height: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-top: 2px solid #73aa2d;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 .error-message {
     color: #ff6b6b;
     text-align: center;
@@ -2062,17 +2038,6 @@ a.button {
     50% { transform: translateY(-3px) rotate(0deg); }
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Dark mode support */
 .dark-mode .fade-gradient {
     background: linear-gradient(to bottom, transparent, rgba(30,30,30,0.9), #1e1e1e);
@@ -2082,102 +2047,87 @@ a.button {
     background: #1e1e1e;
     color: #73aa2d;
 }
-/* Enhanced update display styles */
-.update-display-container {
-    position: relative;
-    overflow: hidden;
+
+/* Green scrollbar for CORI Update History - Dynamic based on content */
+#updateHistory {
+  /* No fixed height - let it grow naturally */
+  /* Scrollbar will be enabled via JavaScript when needed */
+  padding-right: 0px; /* Start with no padding */
+  transition: padding-right 0.3s ease; /* Smooth transition when scrollbar appears */
 }
 
-.update-preview {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 1;
-    transform: translateY(0);
+/* When scrollable class is added (4+ updates) */
+#updateHistory.scrollable {
+  max-height: 565px; /* Height of approximately 3 full update items */
+  overflow-y: auto;
+  padding-right: 8px; /* Add padding when scrollbar is active */
 }
 
-.update-preview.collapsed {
-    opacity: 0;
-    transform: translateY(-20px);
-    height: 0;
-    overflow: hidden;
+/* Webkit browsers (Chrome, Safari, Edge) - Only when scrollable */
+#updateHistory.scrollable::-webkit-scrollbar {
+  width: 12px;
 }
 
-.update-full-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-    transform: translateY(20px);
+#updateHistory.scrollable::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(115, 170, 45, 0.2);
 }
 
-.update-full-content.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    transform: translateY(0);
-    margin-top: 1rem;
+#updateHistory.scrollable::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #73aa2d, #5a8b24);
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 4px rgba(115, 170, 45, 0.3);
+  transition: all 0.3s ease;
 }
 
-.content-fade {
-    position: relative;
-    margin-top: -2rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#updateHistory.scrollable::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a8b24, #73aa2d);
+  box-shadow: 0 4px 8px rgba(115, 170, 45, 0.4);
+  transform: scale(1.05);
 }
 
-.fade-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3rem;
-    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9), white);
-    pointer-events: none;
+#updateHistory.scrollable::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #4a7320, #5a8b24);
 }
 
-.more-content-hint {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #73aa2d;
-    font-size: 0.9rem;
-    font-style: italic;
-    background: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    border: 1px solid rgba(115, 170, 45, 0.2);
+/* Firefox - Only when scrollable */
+#updateHistory.scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #73aa2d rgba(255, 255, 255, 0.1);
 }
 
-.expand-icon {
-    transition: transform 0.3s ease;
+/* Dark mode adjustments - Only when scrollable */
+.dark-mode #updateHistory.scrollable::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(115, 170, 45, 0.3);
 }
 
-.expand-icon.rotated {
-    transform: rotate(180deg);
+.dark-mode #updateHistory.scrollable::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-.expand-btn {
-    position: relative;
-    overflow: hidden;
+.dark-mode #updateHistory.scrollable {
+  scrollbar-color: #73aa2d rgba(0, 0, 0, 0.3);
 }
 
-.expand-btn:hover .expand-icon {
-    animation: bounce 0.6s ease;
+/* Optional: Add subtle animation to the scrollbar - Only when scrollable */
+#updateHistory.scrollable::-webkit-scrollbar-thumb {
+  animation: scrollbarGlow 3s ease-in-out infinite alternate;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-3px) rotate(0deg); }
+@keyframes scrollbarGlow {
+  from { 
+    box-shadow: 0 2px 4px rgba(115, 170, 45, 0.3);
+  }
+  to { 
+    box-shadow: 0 2px 8px rgba(115, 170, 45, 0.5);
+  }
 }
 
-/* Dark mode support */
-.dark-mode .fade-gradient {
-    background: linear-gradient(to bottom, transparent, rgba(30,30,30,0.9), #1e1e1e);
-}
-
-.dark-mode .more-content-hint {
-    background: #1e1e1e;
-    color: #73aa2d;
+/* Ensure the scrollbar is always visible when there's content to scroll */
+#updateHistory.scrollable:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #73aa2d, #5a8b24);
+  opacity: 1;
 }
