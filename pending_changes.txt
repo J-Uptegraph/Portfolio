@@ -1,5 +1,0 @@
-On mobile, when using the hamburger menu/nav bar... clicking the link should land in the proper locations... hovering just before the start of that section
-I need to fix the way the Featured section "overly zooms in" blowing the page up to be too large to see the other titles
-Nav on mobile isn't awesome... how do we fix it...
-
-                    
