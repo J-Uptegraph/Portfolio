@@ -519,7 +519,7 @@ async function fetchUpdates() {
         window.totalGitHubUpdates = updateFiles.length;
 
         const updates = await Promise.all(
-            updateFiles.slice(0, 5).map(async file => {
+            updateFiles.slice(0, 10).map(async file => {
                 try {
                     const contentResponse = await fetch(file.download_url);
                     const content = await contentResponse.text();
