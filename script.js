@@ -569,8 +569,8 @@ function displayLatestUpdate(update) {
     const preview = lines.slice(0, 10).join('\n');
     
     container.innerHTML = `
-        <div class="update-content" style="display: flex; flex-direction: row; align-items: center; gap: 1rem; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 200px;">
+        <div class="update-content" style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="width: 100%;">
                 <div class="update-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                     <span class="version-badge">v${update.version}</span>
                     <span style="color: #73aa2d; font-size: 1rem; font-weight: bold;">${updateDate}</span>
@@ -579,29 +579,10 @@ function displayLatestUpdate(update) {
                     ${parseMarkdown(preview)}
                 </div>
             </div>
-            <a href="${update.url}" target="_blank" class="cori-btn" style="text-align: center; padding: 0.5rem 1rem; white-space: nowrap; text-decoration: none; background-color: #73aa2d; color: #fff; border-radius: 5px;">
+            <a href="${update.url}" target="_blank" class="cori-btn" style="width: 100%; text-align: center; padding: 0.5rem 1rem; text-decoration: none; background-color: #73aa2d; color: #fff; border-radius: 5px; box-sizing: border-box;">
                 <i class="fab fa-github"></i> Read Update
             </a>
         </div>
-        <style>
-            @media (max-width: 600px) {
-                .update-content {
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-                .cori-btn {
-                    width: 100%;
-                    box-sizing: border-box;
-                    margin-top: 0.5rem;
-                }
-            }
-            @media (min-width: 601px) {
-                .cori-btn {
-                    width: auto;
-                    align-self: center;
-                }
-            }
-        </style>
     `;
 }
 
@@ -651,7 +632,7 @@ function displayUpdateHistory(updates) {
                             ${preview}
                         </p>
                     </div>
-                    <a href="${update.url}" target="_blank" class="cori-btn" style="text-align: center; padding: 0.5rem 1rem; white-space: nowrap; text-decoration: none; background-color: #73aa2d; color: #fff; border-radius: 5px;">
+                    <a href="${update.url}" target="_blank" class="cori-btn" style="width: auto; display: inline-block; text-align: center; padding: 0.5rem 1rem; text-decoration: none; background-color: #73aa2d; color: #fff; border-radius: 5px; margin: 0 auto;">
                         <i class="fab fa-github"></i> View Full Update
                     </a>
                 </div>
