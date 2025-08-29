@@ -64,7 +64,7 @@ const modalInfo = {
     "imgSource": "./media/img/jediTrainingUnity.webp"
   },
   "9": {
-    "title": "Avatar Flight of Passage Prototype",
+    "title": "Avatar Flight of Passage: Innovation Program",
     "info": "Partnered with Disney Imagineering to prototype immersive experiences for the Avatar ride, focusing on UX research and physical prototyping. Applied human-centered design principles to entertainment robotics, aligning with dynamic robot-human interactions.",
     "link": "https://www.canva.com/design/DAFZ6cr_v7k/l3q20S17Dvcipoya5ex2cQ/view",
     "github": "https://drive.google.com/drive/folders/1ngRPtWswIEcXBmMb5Pc_5xUf4GWZM6rL?usp=share_link",
