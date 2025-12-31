@@ -5,13 +5,13 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/johnathan-uptegraph-270576191/)
 [![Resume](https://img.shields.io/badge/Resume-Download-red)](https://juptegraph.dev/media/pdfs/Johnathan_Uptegraph.pdf)
 
-> *"I build systems that thrive under pressure—and scale with purpose."*
+> *"I build systems that thrive under pressure and scale with purpose."*
 
 ---
 
 ## 🎯 Portfolio Overview
 
-Hi, I'm **Johnathan Uptegraph**—thanks for checking out my portfolio! This site is a showcase of my robotics expertise, ongoing R&D projects, and technical interests. It demonstrates my experience in industrial automation alongside personal exploration of advanced robotics applications and system-level innovation.
+Hi, I'm **Johnathan Uptegraph** thanks for checking out my portfolio! This site is a showcase of my robotics expertise, ongoing R&D projects, and technical interests. It demonstrates my experience in industrial automation alongside personal exploration of advanced robotics applications and system-level innovation.
 
 **Live Site:** [juptegraph.dev](https://juptegraph.dev)
 
@@ -41,7 +41,7 @@ Hi, I'm **Johnathan Uptegraph**—thanks for checking out my portfolio! This sit
 
 ## 🧠 About Me
 
-I see robotics as both a science and an art—where engineering meets creative problem-solving. With over two years of experience deploying 50+ robots across $25M+ installations, I specialize in solutions that launch fast, scale efficiently, and adapt to real-world constraints.
+I see robotics as both a science and an art where engineering meets creative problem-solving. With over two years of experience deploying 50+ robots across $25M+ installations, I specialize in solutions that launch fast, scale efficiently, and adapt to real-world constraints.
 
 Through ongoing personal projects, I explore advanced robotics applications including humanoid systems, assistive technology, and human-robot interaction. Projects like **C.O.R.I.** and *Software Patch* represent my continued learning and technical curiosity outside of professional work.
 
